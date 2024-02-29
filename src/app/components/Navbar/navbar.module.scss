@@ -1,38 +1,83 @@
-// mobileFirst
-// base.scss
-
 .container {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    width:100%;
-    padding: 20px;
-    background-color: #10111f;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 20px;
+  background-color: #10111f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 4px 17px -5px rgba(0, 0, 0, 0.88);
+
+  .logo_container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    .logo_container{
-        display: flex;
-        justify-content: space-between;
+    .logo_container_img {
+      height: 50px;
+      max-height: 80px;
+      border-radius: 50%;
+      margin-right: 10px;
     }
   }
-  
-  // Other base styles...
 
-  // responsive.scss
+  .container_list {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    margin-left: -20px;
+    list-style: none;
+    background-color: #1c1d30;
+    display: flex;
+    flex-direction: column;
+
+    .container_list_items {
+      text-align: right;
+      border-top: 0.1px solid rgb(43, 43, 43);
+      padding: 20px;
+    }
+  }
+  .container_hamburger {
+    padding-top: 8px;
+    font-size: 20px;
+  }
+}
+
+// Other base styles...
+
+// responsive.scss
 
 @media (min-width: 768px) {
-    .container {
-      font-size: 18px;
-    }
-  
-    // Other styles for tablets...
+  .container {
+    font-size: 18px;
   }
-  
-  @media (min-width: 1024px) {
-    .container {
-      font-size: 20px;
+
+  // Other styles for tablets...
+}
+
+@media (min-width: 1024px) {
+  .container {
+    font-size: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .container_list {
+      width: auto;
+      position: relative;
+      margin-top: -170px;
+      flex-direction: row;
+      background-color: inherit;
+
+      .container_list_items {
+        margin-right: 10px;
+      }
     }
-  
-    // Other styles for desktops...
+    .container_hamburger {
+      display: none;
+    }
   }
-  
+}
