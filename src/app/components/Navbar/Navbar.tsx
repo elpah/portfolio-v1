@@ -14,7 +14,7 @@ export default function Navbar() {
           src="/images/pp.jpg"
           alt="Image"
         />
-        <div className={styles.logo_container_name}>El-Pachris Obeng</div>
+        <div className={styles.logo_container_name}>EL-PACHRIS OBENG</div>
       </div>
       {isOpen && (
         <ul
