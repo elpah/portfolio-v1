@@ -1,4 +1,4 @@
-*** Portfolio Website ***
+## Portfolio Website ##
 (In Progress)
 This project is a personal portfolio website built with Next.js, designed to showcase a collection of projects developed over the years. The website utilizes SCSS for styling, providing a modern and visually appealing user interface.
 
