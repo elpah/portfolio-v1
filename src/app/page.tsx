@@ -3,38 +3,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.links_container}>
-        <Image
-          src="/images/socials/github.png"
-          alt="github"
-          height={60}
-          width={60}
-          priority
-        />
-        <Image
-          src="/images/socials/linkedin.png"
-          alt="linkedin"
-          height={60}
-          width={60}
-          priority
-        />
-        <Image
-          src="/images/socials/x.png"
-          alt="x"
-          height={60}
-          width={60}
-          priority
-        />
-        <Image
-          src="/images/socials/email.png"
-          alt="email"
-          height={60}
-          width={60}
-          priority
-        />
-      </div>
-      <div className={styles.image_container}>
+    <main className={styles.main_container}>
+      
+      {/* <div className={styles.image_container}>
         <img src="" alt="cartoon-image" />
       </div>
       <div className={styles.intro_container}>
@@ -48,7 +19,7 @@ export default function Home() {
           <p>Download CV</p>
           <p>V</p>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
