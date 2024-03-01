@@ -1,0 +1,30 @@
+.links_container {
+  display: none;
+}
+.main {
+  flex-grow: 1;
+}
+
+@media (min-width: 767px) {
+  .links_container {
+    width: 40px;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    background-color: #ababab;
+    border-radius: 0 6px 6px 0;
+    position: fixed;
+    left: 0;
+    top: 280px;
+    flex-direction: column;
+
+    .image {
+      padding: 6px;
+    }
+    .image:hover {
+      border-radius: 6px;
+      background-color: #cccaca;
+      cursor: pointer;
+    }
+  }
+}
