@@ -5,7 +5,7 @@ import styles from "./navbar.module.scss";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(window.innerWidth > 767);
   const menuRef = useRef();
 
   const handleListItemClick = () => {
