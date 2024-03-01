@@ -1,11 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef();
+
+  const handleListItemClick = () => {
+    if (window.innerWidth < 767) {
+      setIsOpen(false);
+    }
+  };
+  const handleResize = () => {
+    setIsOpen(window.innerWidth > 767);
+  };
+  window.addEventListener("resize", handleResize);
+
   return (
     <nav className={styles.container}>
       <div className={styles.logo_container}>
@@ -16,24 +28,34 @@ export default function Navbar() {
         />
         <div className={styles.logo_container_name}>EL-PACHRIS OBENG</div>
       </div>
-      {isOpen && (
-        <ul
-          className={styles.container_list}
+      <ul
+        className={`${styles.container_list} ${isOpen ? styles.slideDown : ""}`}
+      >
+        <li
+          className={styles.container_list_items}
+          onClick={handleListItemClick}
         >
-          <li className={styles.container_list_items}>
-            <Link href={"/"}>HOME</Link>
-          </li>
-          <li className={styles.container_list_items}>
-            <Link href={"/about"}>ABOUT</Link>
-          </li>
-          <li className={styles.container_list_items}>
-            <Link href={"/projects"}>PROJECTS</Link>
-          </li>
-          <li className={styles.container_list_items}>
-            <Link href={"/contact"}>CONTACT</Link>
-          </li>
-        </ul>
-      )}
+          <Link href={"/"}>HOME</Link>
+        </li>
+        <li
+          className={styles.container_list_items}
+          onClick={handleListItemClick}
+        >
+          <Link href={"/about"}>ABOUT</Link>
+        </li>
+        <li
+          className={styles.container_list_items}
+          onClick={handleListItemClick}
+        >
+          <Link href={"/projects"}>PROJECTS</Link>
+        </li>
+        <li
+          className={styles.container_list_items}
+          onClick={handleListItemClick}
+        >
+          <Link href={"/contact"}>CONTACT</Link>
+        </li>
+      </ul>
       <div
         className={styles.container_hamburger}
         onClick={() => setIsOpen(!isOpen)}
