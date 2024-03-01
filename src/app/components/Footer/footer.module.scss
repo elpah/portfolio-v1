@@ -1,0 +1,29 @@
+// mobileFirst
+// base.scss
+
+.container {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  // Other base styles...
+
+  // responsive.scss
+
+@media (min-width: 768px) {
+    .container {
+      font-size: 18px;
+    }
+  
+    // Other styles for tablets...
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      font-size: 20px;
+    }
+  
+    // Other styles for desktops...
+  }
+  
