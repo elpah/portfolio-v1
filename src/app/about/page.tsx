@@ -10,6 +10,7 @@ export default function About() {
     { skillName: "typescript", imageSrc: "typescript.svg" },
     { skillName: "javascript", imageSrc: "js.png" },
     { skillName: "c", imageSrc: "c.svg" },
+    { skillName: "cpp", imageSrc: "cpp.png" },
     { skillName: "shell", imageSrc: "shell.svg" },
     { skillName: "git", imageSrc: "git.svg" },
     { skillName: "nodejs", imageSrc: "nodejs.svg" },
@@ -18,6 +19,10 @@ export default function About() {
     { skillName: "express", imageSrc: "express.svg" },
     { skillName: "firebase", imageSrc: "firebase.svg" },
     { skillName: "figma", imageSrc: "figma.svg" },
+    { skillName: "tailwind", imageSrc: "tailwind.svg" },
+    { skillName: "sass", imageSrc: "sass.svg" },
+
+
     { skillName: "html", imageSrc: "html5.svg" },
     { skillName: "css", imageSrc: "css.svg" },
   ];
