@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { FaDownload } from "react-icons/fa";
+import Badge from "@/components/Badge/Badge";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         />
       </div>
       <div className={styles.intro_container}>
-        <p className={styles.intro_hello}>👋🏽 Hello Real World...</p>
+        <Badge text="👋🏽 Hello Real World..."/>
         <h2 className={styles.intro_name}>El-Pachris Obeng,</h2>
         <p className={styles.intro_sentence}>
           A fullstack Javascript developer dedicated to crafting elegant,

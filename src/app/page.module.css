@@ -1,8 +1,7 @@
 .main_container {
+  display: flex;
   flex-grow: 1;
   align-items: center;
-
-  display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
@@ -21,15 +20,6 @@
     position: relative;
     margin-top: 50px;
     font-size: 18px;
-
-    .intro_hello {
-      padding: 8px;
-      border-radius: 8px;
-      display: inline;
-      color: #7b4ae2;
-      background-color: #1d142b;
-    }
-
     .intro_name {
       color: #fff;
       margin-top: 30px;
@@ -109,9 +99,6 @@
       }
     }
     .intro_container {
-      .intro_hello {
-        font-size: 35px;
-      }
       .intro_name {
         font-size: 55px;
       }

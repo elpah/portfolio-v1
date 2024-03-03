@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <link
         rel="icon"
-        href="/images/icon.jpg"
+        href="/images/icon.png"
         type="image/<generated>"
         sizes="<generated>"
       />

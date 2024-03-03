@@ -1,0 +1,14 @@
+.badge {
+  padding: 8px;
+  border-radius: 8px;
+  display: inline;
+  color: #7b4ae2;
+  background-color: #1d142b;
+  max-width: 30%;
+}
+
+@media (min-width: 1024px) {
+  .badge {
+    font-size: 35px;
+  }
+}

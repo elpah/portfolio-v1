@@ -1,0 +1,36 @@
+.skills_container {
+  min-width: 50px;
+  min-height: 50px;
+  background-color: #2d2341;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  .skills_image {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (min-width: 767px) {
+  .skills_container {
+    min-width: 60px;
+    min-height: 60px;
+    .skills_image {
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+
+@media (min-width: 1024) {
+  .skills_container {
+    min-width: 60px;
+    min-height: 60px;
+    .skills_image {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
