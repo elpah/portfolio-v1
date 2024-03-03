@@ -1,21 +1,133 @@
 .main_container {
+  flex-grow: 1;
+  align-items: center;
 
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+
+  .image_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .image {
+      border-radius: 50%;
+      width: 170px;
+      height: 170px;
+    }
+  }
+  .intro_container {
+    position: relative;
+    margin-top: 50px;
+    font-size: 18px;
+
+    .intro_hello {
+      padding: 8px;
+      border-radius: 8px;
+      display: inline;
+      color: #7b4ae2;
+      background-color: #1d142b;
+    }
+
+    .intro_name {
+      color: #fff;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 35px;
+    }
+    .intro_sentence {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #9c9c9c;
+    }
+    .cv_container {
+      margin-top: 50px;
+      justify-content: center;
+      display: flex;
+
+      .cv_container_2 {
+        color: #7b4ae2;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #7b4ae2;
+        border-radius: 8px;
+        padding: 8px;
+        animation: bounce 1s infinite;
+      }
+      .download_icon {
+        font-size: 1.5em;
+        font-weight: 100;
+      }
+    }
+  }
 }
 
-@media (min-width: 767px){
+@media (min-width: 767px) {
   .main_container {
+    flex-direction: row;
+    width: 80%;
 
-
+    .image_container {
+      margin-top: 0;
+      margin-right: 50px;
+      .image {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .intro_container {
+      margin-top: 0;
+      .intro_name {
+        font-size: 40px;
+      }
+      .intro_sentence {
+        font-size: 18px;
+      }
+      .cv_container {
+        position: absolute;
+        left: 0;
+        .cv_container_2 {
+          cursor: pointer;
+          transition: font-size 0.3s ease;
+        }
+        .cv_container_2:hover {
+          font-size: 20px;
+        }
+      }
+    }
   }
-
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+@media (min-width: 1024px) {
+  .main_container {
+    .image_container {
+      margin-top: 50px;
+      .image {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    .intro_container {
+      .intro_hello {
+        font-size: 35px;
+      }
+      .intro_name {
+        font-size: 55px;
+      }
+      .intro_sentence {
+        font-size: 28px;
+      }
+    }
   }
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
