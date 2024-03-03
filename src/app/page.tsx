@@ -1,25 +1,38 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { FaDownload } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className={styles.main_container}>
-      
-      {/* <div className={styles.image_container}>
-        <img src="" alt="cartoon-image" />
+    <div className={styles.main_container}>
+      <div className={styles.image_container}>
+        <Image
+          className={styles.image}
+          src="/images/pp.jpg"
+          alt="cartoon-image"
+          width={100}
+          height={100}
+        />
       </div>
       <div className={styles.intro_container}>
-        <p>Hello Real World 👋🏽</p>
-        <h1>I am EL-Pachris Obeng</h1>
-        <p>
-          Passionate Software Engineer with a focus on React, dedicated to
-          crafting elegant and user-friendly web applications.
+        <p className={styles.intro_hello}>👋🏽 Hello Real World...</p>
+        <h2 className={styles.intro_name}>El-Pachris Obeng,</h2>
+        <p className={styles.intro_sentence}>
+          A fullstack Javascript developer dedicated to crafting elegant,
+          responsive and user-friendly web applications.
         </p>
         <div className={styles.cv_container}>
-          <p>Download CV</p>
-          <p>V</p>
+          <div className={styles.cv_container_2}>
+            <div> Download CV</div>
+            <Image
+              height={20}
+              width={20}
+              src="/images/download-icon.svg"
+              alt="download icon"
+            />
+          </div>
         </div>
-      </div> */}
-    </main>
+      </div>
+    </div>
   );
 }

@@ -7,7 +7,7 @@
 
 @media (min-width: 767px) {
   .links_container {
-    width: 40px;
+    width: 50px;
     align-items: center;
     padding: 5px;
     display: flex;
@@ -15,11 +15,11 @@
     border-radius: 0 6px 6px 0;
     position: fixed;
     left: 0;
-    top: 280px;
+    top: 44%;
     flex-direction: column;
 
     .image {
-      padding: 6px;
+      padding: 5px;
     }
     .image:hover {
       border-radius: 6px;
