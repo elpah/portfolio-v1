@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 import styles from "./navbar.module.scss";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 767);
@@ -23,15 +24,22 @@ export default function Navbar() {
 
   return (
     <nav className={styles.container}>
-      <div className={styles.logo_container}>
+      <motion.div
+       initial={{ opacity: 0, x: -150 }}
+       animate={{ opacity: 1, x: 0 }}
+       transition={{ duration: 1 }}
+       className={styles.logo_container}>
         <img
           className={styles.logo_container_img}
           src="/images/pp.jpg"
           alt="Image"
         />
         <div className={styles.logo_container_name}>EL-PACHRIS OBENG</div>
-      </div>
-      <ul
+      </motion.div>
+      <motion.ul
+      initial={{ opacity: 0, x: 150 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
         className={`${styles.container_list} ${isOpen ? styles.slideDown : ""}`}
       >
         <li
@@ -58,13 +66,13 @@ export default function Navbar() {
         >
           <Link href={"/contact"}>CONTACT</Link>
         </li>
-      </ul>
-      <div
+      </motion.ul>
+      <motion.div
         className={styles.container_hamburger}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      </motion.div>
     </nav>
   );
 }

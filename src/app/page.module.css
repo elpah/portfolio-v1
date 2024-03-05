@@ -20,6 +20,13 @@
     position: relative;
     margin-top: 50px;
     font-size: 18px;
+    .badge {
+      padding: 8px;
+      border-radius: 8px;
+      color: #7b4ae2;
+      background-color: #1d142b;
+      max-width: 27%;
+    }
     .intro_name {
       color: #fff;
       margin-top: 30px;
@@ -68,6 +75,9 @@
     }
     .intro_container {
       margin-top: 0;
+      .badge {
+        font-size: 20px;
+      }
       .intro_name {
         font-size: 40px;
       }

@@ -18,11 +18,10 @@ export default function About() {
     { skillName: "mysql", imageSrc: "sql.svg" },
     { skillName: "express", imageSrc: "express.svg" },
     { skillName: "firebase", imageSrc: "firebase.svg" },
+    { skillName: "framermotion", imageSrc: "framermotion.svg" },
     { skillName: "figma", imageSrc: "figma.svg" },
     { skillName: "tailwind", imageSrc: "tailwind.svg" },
     { skillName: "sass", imageSrc: "sass.svg" },
-
-
     { skillName: "html", imageSrc: "html5.svg" },
     { skillName: "css", imageSrc: "css.svg" },
   ];
