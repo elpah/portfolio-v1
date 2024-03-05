@@ -25,7 +25,7 @@
       border-radius: 8px;
       color: #7b4ae2;
       background-color: #1d142b;
-      max-width: 27%;
+      width: 220px;
     }
     .intro_name {
       color: #fff;
@@ -77,6 +77,7 @@
       margin-top: 0;
       .badge {
         font-size: 20px;
+        width: 250px;
       }
       .intro_name {
         font-size: 40px;

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "logoname";
+  src: url("/assets/fonts/remarcle-font/Remarcle-lBx0.tff") format("truetype");
+  // font-weight: normal;
+  // font-style: normal;
+}
+
 .container {
   position: relative;
   font-family: "Arial", sans-serif;
@@ -22,6 +29,10 @@
       border-radius: 50%;
       margin-right: 10px;
     }
+    // .logo_container_name {
+
+    //   font-family: "logoname", sans-serif;
+    // }
   }
   .container_list {
     position: absolute;
