@@ -1,17 +1,25 @@
+"use client" 
 import Badge from "@/components/Badge/Badge";
 import Image from "next/image";
 import styles from "./about.module.scss";
 import Skill from "@/components/Skill/Skill";
+import { motion } from "framer-motion";
+import { useMediaQuery } from '@custom-react-hooks/all';
+
+
 
 export default function About() {
+  
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   const skills = [
     {skillName: "next", imageSrc: "next.svg"},
     {skillName: "react", imageSrc: "react.svg"},
     { skillName: "typescript", imageSrc: "typescript.svg" },
     { skillName: "javascript", imageSrc: "js.png" },
     { skillName: "c", imageSrc: "c.svg" },
-    { skillName: "cpp", imageSrc: "cpp.png" },
-    { skillName: "shell", imageSrc: "shell.svg" },
+    { skillName: "c++", imageSrc: "cpp.png" },
+    { skillName: "powershell", imageSrc: "shell.svg" },
     { skillName: "git", imageSrc: "git.svg" },
     { skillName: "nodejs", imageSrc: "nodejs.svg" },
     { skillName: "mongodb", imageSrc: "mongodb.svg" },
@@ -28,7 +36,14 @@ export default function About() {
 
   return (
     <main className={styles.main_container}>
-      <Badge className={styles.badge} text="🔗About me..." />
+
+
+      <motion.p 
+      initial={{ opacity: 0, x: isMobile? 150: 0, y: isMobile? 0 : -50 }}
+      animate={{ opacity: 1, x:0, y: 0}}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 1 }}
+      className={styles.badge} >🔗About me...</motion.p>
       <section className={styles.about_me}>
         <h2 className={styles.header}>Introduction.</h2>
         <p className={styles.paragraph}>

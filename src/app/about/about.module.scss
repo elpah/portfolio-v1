@@ -6,7 +6,11 @@
   flex-grow: 1;
 
   .badge {
-    max-width: 200px;
+    padding: 8px;
+    border-radius: 8px;
+    color: #7b4ae2;
+    background-color: #1d142b;
+    width: 120px;
     margin-top: 50px;
     margin-bottom: 15px;
   }
@@ -59,6 +63,7 @@
 
     .badge {
       font-size: 23px;
+      width: 170px;
     }
     .about_me {
       padding: 40px;
