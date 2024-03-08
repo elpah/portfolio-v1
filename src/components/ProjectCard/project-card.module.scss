@@ -47,8 +47,13 @@
       flex-direction: row;
 
       .tools_image {
-        width: 25px;
-        height: 25px;
+        // background-color: #8a7171;
+
+        background-color: #816fa6;
+        padding: 2px;
+        border-radius: 1px;
+        width: 23px;
+        height: 23px;
         margin-right: 5px;
       }
     }
@@ -128,8 +133,8 @@
       .tools_used {
         margin-top: 110px;
         .tools_image {
-          width: 28px;
-          height: 28px;
+          width: 25px;
+          height: 25px;
         }
       }
     }
