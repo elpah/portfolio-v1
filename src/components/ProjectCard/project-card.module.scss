@@ -99,7 +99,7 @@
       }
 
       .header {
-        font-size: 25px;
+        font-size: 20px;
       }
       .about_project {
         padding: 10px;
@@ -118,12 +118,14 @@
 }
 @media (min-width: 1024px) {
   .card_container {
+    width: 95%;
+
     .details {
       .tools_used {
         margin-top: 115px;
       }
       .header {
-        font-size: 30px;
+        font-size: 25px;
       }
       .about_project {
         .about_project_text {
