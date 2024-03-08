@@ -1,0 +1,142 @@
+.card_container {
+  width: 100%;
+  // max-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .details {
+    width: 100%;
+    position: relative;
+
+    .featured {
+      color: #9857d3;
+      font-size: 10px;
+      // margin-bottom: px;
+    }
+
+    .header {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .about_project {
+      position: absolute;
+      min-width: 130%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+
+      .about_project_text {
+        line-height: 1.3em;
+        font-size: 10px;
+      }
+    }
+
+    .tools_used {
+      margin-top: 90px;
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: row;
+
+      .tools_image {
+        // background-color: #8a7171;
+
+        background-color: #816fa6;
+        padding: 2px;
+        border-radius: 1px;
+        width: 23px;
+        height: 23px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .image_container {
+    width: 100%;
+    padding: 15px 0 0 15px;
+    border-radius: 8px;
+    background-color: #1f1f20;
+  }
+
+  .project_image {
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+    min-height: 150px;
+    object-fit: cover;
+    border-radius: 8px 0 8px 0;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+  .card_container {
+    .details {
+      .about_project {
+        .about_project_text {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .card_container {
+    .details {
+      .tools_used {
+        margin-top: 105px;
+      }
+      .featured {
+        font-size: 12px;
+      }
+
+      .header {
+        font-size: 25px;
+      }
+      .about_project {
+        padding: 10px;
+
+        .about_project_text {
+          font-size: 11px;
+        }
+      }
+    }
+    .image_container {
+      padding: 15px 0 0 15px;
+      border-radius: 8px;
+      background-color: #1f1f20;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .card_container {
+    .details {
+      .tools_used {
+        margin-top: 115px;
+      }
+      .header {
+        font-size: 30px;
+      }
+      .about_project {
+        .about_project_text {
+          font-size: 12px;
+        }
+      }
+      .tools_used {
+        margin-top: 110px;
+        .tools_image {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

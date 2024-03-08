@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@custom-react-hooks/all": "^1.4.19",
+    "framer-motion": "^11.0.8",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.0.1",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@types/node": "^20",

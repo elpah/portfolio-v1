@@ -1,14 +1,18 @@
 "use client";
 import React, {useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
-
-import styles from "./navbar.module.scss";
+import { useMediaQuery } from '@custom-react-hooks/all';
 import Link from "next/link";
+import { motion } from "framer-motion";
+import localFont from "next/font/local"
+import styles from "./navbar.module.scss";
+
+const myfont = localFont({src:"../../fonts/AnkhSanctuary-nROx4.ttf"})
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(window.innerWidth > 767);
-  // const [isOpen, setIsOpen] = useState(false);
+    const isMobile = useMediaQuery('(min-width: 767px)');
+
+  const [isOpen, setIsOpen] = useState(isMobile);
   const menuRef = useRef();
 
   const handleListItemClick = () => {
@@ -17,21 +21,28 @@ export default function Navbar() {
     }
   };
   const handleResize = () => {
-    setIsOpen(window.innerWidth > 767);
+    setIsOpen(isMobile);
   };
   window.addEventListener("resize", handleResize);
 
   return (
     <nav className={styles.container}>
-      <div className={styles.logo_container}>
+      <motion.div
+       initial={{ opacity: 0, x: -150 }}
+       animate={{ opacity: 1, x: 0 }}
+       transition={{ duration: 1 }}
+       className={styles.logo_container}>
         <img
           className={styles.logo_container_img}
           src="/images/pp.jpg"
           alt="Image"
         />
-        <div className={styles.logo_container_name}>EL-PACHRIS OBENG</div>
-      </div>
-      <ul
+        <h2 style={myfont.style} className={styles.logo_container_name}>EL-PACHRIS</h2>
+      </motion.div>
+      <motion.ul
+      initial={{ opacity: 0, x: 150 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
         className={`${styles.container_list} ${isOpen ? styles.slideDown : ""}`}
       >
         <li
@@ -58,13 +69,13 @@ export default function Navbar() {
         >
           <Link href={"/contact"}>CONTACT</Link>
         </li>
-      </ul>
-      <div
+      </motion.ul>
+      <motion.div
         className={styles.container_hamburger}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      </motion.div>
     </nav>
   );
 }
