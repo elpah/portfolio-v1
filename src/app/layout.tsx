@@ -28,7 +28,7 @@ export default function RootLayout({
         sizes="<generated>"
       />
       <body className={inter.className}>
-        <div className={styles.links_container}>
+        {/* <div className={styles.links_container}>
           <a
             href="https://github.com/elpah"
             target="_blank"
@@ -81,10 +81,10 @@ export default function RootLayout({
               priority
             />
           </a>
-        </div>
+        </div> */}
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -1,4 +1,11 @@
 .card_container {
+  background-color: rgba(124, 86, 134, 0.2);
+  // background-color: rgb(51, 33, 62);
+
+  padding: 12px;
+  border-radius: 10px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
   width: 100%;
   // max-width: 450px;
   display: flex;
@@ -49,7 +56,7 @@
       .tools_image {
         // background-color: #8a7171;
 
-        background-color: #816fa6;
+        // background-color: #816fa6;
         padding: 2px;
         border-radius: 1px;
         width: 23px;
@@ -63,7 +70,7 @@
     width: 100%;
     padding: 15px 0 0 15px;
     border-radius: 8px;
-    background-color: #1f1f20;
+    background-color: #0d0d0e;
   }
 
   .project_image {
@@ -78,6 +85,7 @@
 
 @media (min-width: 200px) and (max-width: 400px) {
   .card_container {
+    transition: all ease-in-out 0.3;
     .details {
       .about_project {
         .about_project_text {

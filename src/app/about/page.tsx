@@ -64,7 +64,7 @@ export default function About() {
       </motion.p>
       <section className={styles.about_me}>
         <motion.h2
-          initial={{ opacity: 0, x: -150 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
@@ -73,27 +73,35 @@ export default function About() {
           Introduction.
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, x: 150 }}
+          initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
           className={styles.paragraph}
         >
-          🎓 Graduated in Computer Engineering in 2022. <br /> <br />
-          👨‍💻 Over 2 years of experience in developing and programming interfaces
-          with JavaScript, React JS, and TypeScript, focusing on both front and
-          backend development. <br />
+          🎓 Graduated with a Bachelor of Science in Computer Engineering in
+          2022, and currently studying software engineering at 42 Wolfsburg.
           <br />
-          💡 Particularly interested in mastering technologies like React,
-          Next.js, Node.js, and Express for building robust and scalable
-          applications. <br /> <br />
-          🚀 Every day, my goal is to enhance my skills and capabilities,
-          pushing myself to exceed yesterday's accomplishments in both front and
-          backend development.
-          <br /> <br />
-          👨🏾‍💼I'm open to Job opportunities where I can contribute, learn and
-          grow. If you have a good opportunity that matches my skills and
-          experience then don't hesitate to contact me.
+          <br />
+          👨‍💻 I specialize in building user-friendly interfaces and creating
+          innovative applications using technologies such as React JS, Next.js, Node.js, Express
+          JavaScript, TypeScript, for both frontend and
+          backend development. I am passionate about leveraging these technologies to
+          develop scalable solutions. 
+          <br />
+          <br />
+          🚀 Committed to continual growth, I strive
+          to improve my technical skills daily through continous learning and,
+          staying updated with emerging technologies and best practices. 
+          <br />
+          <br />
+          🕒 In my free time, I enjoy playing video games, the piano and
+          saxophone, and occasionally playing hockey. 
+          <br />
+          <br />
+          👨🏾‍💼 I am open to new opportunities where I can contribute my expertise and continue
+          learning. Feel free to reach out if you have an exciting opportunity
+          to discuss!
         </motion.p>
       </section>
 

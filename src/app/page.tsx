@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Badge from "@/components/Badge/Badge";
 import PacmanLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
@@ -51,7 +50,7 @@ export default function Home() {
           <motion.p
             initial={{
               opacity: 0,
-              x: isMobile ? 100 : 0,
+              x: isMobile ? 150 : 0,
               y: isMobile ? 0 : -50,
             }}
             animate={{ opacity: 1, x: 0, y: 0 }}
@@ -61,20 +60,22 @@ export default function Home() {
           >
             👋🏽 Hello Real World...
           </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, x: isMobile ? -150 : 150 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 1 }}
-            className={styles.intro_name}
-          >
-            El-Pachris Obeng,
-          </motion.h2>
+         
+            <motion.h2
+              // initial={{ opacity: 0, x: isMobile ? -150 : -150 }}
+              // animate={{ opacity: 1, x: 0 }}
+              // exit={{ opacity: 0, x: -100 }}
+              // transition={{ duration: 1 }}
+             className={styles.intro_name}>
+              El-Pachris Obeng
+              <span className={styles.cursor}></span>
+            </motion.h2>
+            
           <motion.p
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -150 }}
-            transition={{ duration: isMobile ? 1 : 1}}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: isMobile ? 1 : 1.5 }}
             className={styles.intro_sentence}
           >
             A fullstack Javascript developer dedicated to crafting elegant,
