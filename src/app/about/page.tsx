@@ -3,7 +3,6 @@ import styles from "./about.module.scss";
 import Skill from "@/components/Skill/Skill";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 import { useMediaQuery } from "@custom-react-hooks/all";
 import { useEffect } from "react";
 
@@ -99,8 +98,8 @@ export default function About() {
           saxophone, and occasionally playing hockey. 
           <br />
           <br />
-          👨🏾‍💼 I am open to new opportunities where I can contribute my expertise and continue
-          learning. Feel free to reach out if you have an exciting opportunity
+          👨🏾‍💼 I am open to new opportunities where I can contribute my expertise.
+            Feel free to reach out if you have an exciting opportunity
           to discuss!
         </motion.p>
       </section>

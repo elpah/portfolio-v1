@@ -2,14 +2,14 @@
 import ContactCard from "@/components/ContactCard/ContactCard";
 import styles from "./contact.module.scss";
 import { motion } from "framer-motion";
-import { FaPhone ,FaEnvelope} from 'react-icons/fa';
+import { FaPhone ,FaEnvelope, FaTelegram} from 'react-icons/fa';
 
 
 export default function Contact() {
   const contactInfo = [
     { cardName: "Phone", cardText: "+31 62 499 165", cardIcon:<FaPhone className={styles.CardIcon}/>, cardLink: "" },
     { cardName: "Email", cardText: "obengelpachris@gmail.com", cardIcon:<FaEnvelope className={styles.CardIcon}/>, cardLink: "" },
-    { cardName: "LinkedIn", cardText: "", cardLink: "" },
+    { cardName: "Telegram", cardText: "@paruah", cardIcon:<FaTelegram className={styles.CardIcon}/>, cardLink: "" },
   ];
   return (
     <main className={styles.main}>
