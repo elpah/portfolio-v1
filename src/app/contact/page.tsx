@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import ContactCard from "@/components/ContactCard/ContactCard";
 import styles from "./contact.module.scss";
 import { motion } from "framer-motion";
@@ -151,6 +152,29 @@ export default function Contact() {
 
 
 
+interface FormData{
+  name:string;
+  email:string;
+  subject:string;
+  message:string;
+}
+
 function handleSubmit(){
   console.log("submitted");
 }
+
+const sendFormData = (keyword: string) =>
+  axios
+    .post<FormData>("/api", {
+      name: keyword,
+      email: "example@example.com",
+      subject: "Default Subject",
+      message: "Default Message",
+    })
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      console.error("Error fetching images:", error);
+      throw error; 
+    });
