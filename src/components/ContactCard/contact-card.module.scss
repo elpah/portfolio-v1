@@ -1,0 +1,45 @@
+.contact_card_container {
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.7px solid #4e3b59;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  border-radius: 8px;
+  .image_container {
+    background-color: rgb(243, 222, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(142, 103, 156);
+    height: 80px;
+    width: calc(100% / 4);
+    max-width: 80px;
+    border-radius: 150%;
+  }
+  .info_container {
+    width: calc((3 * 100%) / 4);
+    box-sizing: border-box;
+    .info_header {
+      font-size: 18px;
+      margin-bottom: 10px;
+      &:hover {
+        color: rgb(208, 154, 247);
+      }
+    }
+    .info_text {
+      font-size: 13px;
+      &:hover {
+        color: rgb(208, 154, 247);
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+}

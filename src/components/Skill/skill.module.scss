@@ -1,4 +1,5 @@
 .skills_container {
+  cursor: pointer;
   .skill_name {
     font-size: 0;
   }
@@ -18,7 +19,6 @@
     box-shadow: -1px 0px 13px 4px rgb(156, 112, 250, 0.5);
     transform: scale(1.05);
     .skill_name {
-      // display: block;
       transition: all 0.2s ease;
       font-size: 10px;
       color: #dcdcdc;

@@ -29,10 +29,6 @@
       border-radius: 50%;
       margin-right: 10px;
     }
-    // .logo_container_name {
-
-    //   font-family: "logoname", sans-serif;
-    // }
   }
   .container_list {
     position: absolute;
@@ -52,6 +48,7 @@
       text-align: right;
       border-top: 0.1px solid rgb(43, 43, 43);
       padding: 20px;
+      cursor: pointer;
     }
   }
   .slideDown {

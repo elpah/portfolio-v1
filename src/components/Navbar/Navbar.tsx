@@ -13,7 +13,7 @@ export default function Navbar() {
     const isMobile = useMediaQuery('(min-width: 767px)');
 
   const [isOpen, setIsOpen] = useState(isMobile);
-  const menuRef = useRef();
+  // const menuRef = useRef();
 
   const handleListItemClick = () => {
     if (window.innerWidth < 767) {
@@ -34,7 +34,7 @@ export default function Navbar() {
        className={styles.logo_container}>
         <img
           className={styles.logo_container_img}
-          src="/images/pp.jpg"
+          src="/images/logo-image.jpg"
           alt="Image"
         />
         <h2 style={myfont.style} className={styles.logo_container_name}>EL-PACHRIS</h2>

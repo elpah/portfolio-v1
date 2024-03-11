@@ -15,7 +15,8 @@
     margin-bottom: 15px;
   }
   .about_me {
-    background-color: rgb(68, 68, 68, 0.2);
+    // background-color: rgba(130, 96, 139, 0.2);
+    background-color: rgba(83, 57, 91, 0.2);
     border-radius: 8px;
     padding: 20px;
     .header {
@@ -32,6 +33,9 @@
     margin-top: 20px;
     .header {
       padding-left: 20px;
+    }
+    .badge_skills {
+      width: 90px;
     }
     .skills_container {
       border: 1px solid #411a94;
@@ -66,7 +70,7 @@
       width: 170px;
     }
     .about_me {
-      padding: 40px;
+      padding: 60px;
       margin-bottom: 20px;
       .header {
         font-size: 25px;
@@ -74,12 +78,15 @@
       }
       .paragraph {
         font-size: 18px;
-        line-height: 1.5em;
+        line-height: 2em;
         color: #9c9c9c;
       }
     }
     .skills {
       margin-top: 20px;
+      .badge_skills {
+        width: 120px;
+      }
       .header {
         padding-left: 20px;
       }
@@ -138,7 +145,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
-        padding: 15px;
+        padding: 40px;
       }
       .skills_image {
         width: 90%;
