@@ -15,6 +15,7 @@
     "node-mailjet": "^3.4.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "7.43",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
     "react-spinners": "^0.13.8"

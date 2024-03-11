@@ -1,11 +1,18 @@
 "use client";
 import axios from "axios";
 import ContactCard from "@/components/ContactCard/ContactCard";
-import styles from "./contact.module.scss";
+import { FieldValues, useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaTelegram } from "react-icons/fa";
+import styles from "./contact.module.scss";
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  
   const contactInfo = [
     {
       cardName: "Phone",
@@ -26,6 +33,11 @@ export default function Contact() {
       cardLink: "",
     },
   ];
+
+  function onSubmit(data: FieldValues) {
+    console.log(data);
+  }
+
   return (
     <main className={styles.main}>
       <motion.p
@@ -56,19 +68,20 @@ export default function Contact() {
           </p>
           <span className={styles.bar}></span>
           <div className={styles.contact_card_container}>
-            {contactInfo.map((contact) => (
+            {contactInfo.map((contact, index) => (
               <ContactCard
+                key={index}
                 cardName={contact.cardName}
                 cardtext={contact.cardText}
               >
-                {contact.cardIcon}{" "}
+                {contact.cardIcon}
               </ContactCard>
             ))}
           </div>
         </motion.div>
 
         <div className={styles.contact_form_container}>
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
@@ -83,7 +96,13 @@ export default function Contact() {
                 className={styles.input}
                 type="text"
                 placeholder="Your Name"
+                {...register("name", {
+                  required: true,
+                })}
               />
+              {errors.name?.type === "required" && (
+                <p className={styles.error}>The name field is required</p>
+              )}
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 100 }}
@@ -96,10 +115,21 @@ export default function Contact() {
                 Email
               </label>
               <input
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "invalid format",
+                  },
+                })}
                 className={styles.input}
                 type="text"
                 placeholder="youremail@email.com"
               />
+              {errors.email?.type === "required" && (
+                <p className={styles.error}>The email field is required</p>
+              )}
+              {errors.email?.type === "pattern" && <p className={styles.error}>Invalid email format</p>}
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -115,6 +145,7 @@ export default function Contact() {
                 className={styles.input}
                 type="text"
                 placeholder="Please enter a subject "
+                {...register("subject")}
               />
             </motion.div>
             <motion.div
@@ -129,9 +160,19 @@ export default function Contact() {
               </label>
               <textarea
                 className={styles.text_area}
-                name="message"
+                // type="message"
                 placeholder="Please enter a message"
+                {...register("message", {
+                  required: true,
+                  minLength: 5,
+                })}
               />
+              {errors.message?.type === "required" && (
+                <p className={styles.error}>The message field is required</p>
+              )}
+              {errors.message?.type === "minLength" && (
+                <p className={styles.error}>Minimum lenght should be 5 characters</p>
+              )}
             </motion.div>
             <motion.button
               initial={{ opacity: 0, y: 50 }}
@@ -150,31 +191,29 @@ export default function Contact() {
   );
 }
 
+// interface FormData {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
 
+// function handleSubmit() {
+//   console.log("submitted");
+// }
 
-interface FormData{
-  name:string;
-  email:string;
-  subject:string;
-  message:string;
-}
-
-function handleSubmit(){
-  console.log("submitted");
-}
-
-const sendFormData = (keyword: string) =>
-  axios
-    .post<FormData>("/api", {
-      name: keyword,
-      email: "example@example.com",
-      subject: "Default Subject",
-      message: "Default Message",
-    })
-    .then((res) => {
-      return res.data;
-    })
-    .catch((error) => {
-      console.error("Error fetching images:", error);
-      throw error; 
-    });
+// const sendFormData = (keyword: string) =>
+//   axios
+//     .post<FormData>("/api", {
+//       name: keyword,
+//       email: "example@example.com",
+//       subject: "Default Subject",
+//       message: "Default Message",
+//     })
+//     .then((res) => {
+//       return res.data;
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching images:", error);
+//       throw error;
+//     });

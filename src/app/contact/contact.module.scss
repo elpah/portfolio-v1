@@ -61,7 +61,7 @@
           }
           .input {
             width: 100%;
-            height: 40px;
+            height: 50px;
             background-color: transparent;
             border: none;
             border: 0.1px solid #4e3b59;
@@ -98,7 +98,7 @@
           }
         }
         .button {
-          height: 38px;
+          height: 45px;
           border-radius: 2px;
           background-color: transparent;
           width: 120px;
@@ -112,6 +112,11 @@
             transform: scale(1.1);
           }
         }
+      }
+      .error {
+        color: #fb1a1a;
+        font-size: 13px;
+        margin-top: 3px;
       }
     }
   }
@@ -162,7 +167,12 @@
               font-size: 15px;
             }
             .input {
+              font-size: 15px;
+
               cursor: text;
+            }
+            .text_area {
+              font-size: 15px;
             }
           }
         }
