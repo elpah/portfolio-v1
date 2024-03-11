@@ -12,7 +12,7 @@ export default function Contact() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
+
   const contactInfo = [
     {
       cardName: "Phone",
@@ -34,8 +34,27 @@ export default function Contact() {
     },
   ];
 
-  function onSubmit(data: FieldValues) {
-    console.log(data);
+  async function onSubmit(data: FieldValues) {
+    console.log(data.email);
+
+    axios
+      .post(
+        "/api",
+        JSON.stringify({
+          data
+         
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error("Error posting data:", error);
+        throw error;
+      });
   }
 
   return (
@@ -129,7 +148,9 @@ export default function Contact() {
               {errors.email?.type === "required" && (
                 <p className={styles.error}>The email field is required</p>
               )}
-              {errors.email?.type === "pattern" && <p className={styles.error}>Invalid email format</p>}
+              {errors.email?.type === "pattern" && (
+                <p className={styles.error}>Invalid email format</p>
+              )}
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -171,7 +192,9 @@ export default function Contact() {
                 <p className={styles.error}>The message field is required</p>
               )}
               {errors.message?.type === "minLength" && (
-                <p className={styles.error}>Minimum lenght should be 5 characters</p>
+                <p className={styles.error}>
+                  Minimum lenght should be 5 characters
+                </p>
               )}
             </motion.div>
             <motion.button
@@ -190,30 +213,3 @@ export default function Contact() {
     </main>
   );
 }
-
-// interface FormData {
-//   name: string;
-//   email: string;
-//   subject: string;
-//   message: string;
-// }
-
-// function handleSubmit() {
-//   console.log("submitted");
-// }
-
-// const sendFormData = (keyword: string) =>
-//   axios
-//     .post<FormData>("/api", {
-//       name: keyword,
-//       email: "example@example.com",
-//       subject: "Default Subject",
-//       message: "Default Message",
-//     })
-//     .then((res) => {
-//       return res.data;
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching images:", error);
-//       throw error;
-//     });
