@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 import styles from './contact-card.module.scss'
 
@@ -9,7 +8,9 @@ type CardProps= {
 }
 export default function ContactCard({cardName,cardtext,children}:CardProps) {
   return (
-    <div className={styles.contact_card_container}>
+    <div 
+   
+    className={styles.contact_card_container}>
         <div className={styles.image_container}>
             {children}
         </div>

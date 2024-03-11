@@ -48,7 +48,7 @@
         width: 4px;
         height: 60px;
         background-color: #fff;
-        animation: blinkCursor 1s infinite steps(2);
+        animation: blinkCursor 1.2s infinite steps(2);
       }
     }
 

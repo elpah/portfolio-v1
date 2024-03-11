@@ -18,7 +18,7 @@ export default function Projects() {
         "/images/skills_png/sass.svg",
       ],
       projectSrc: "",
-      x: -150,
+      x: -100,
     },
     {
       projectName: "Elpatronics",
@@ -32,7 +32,7 @@ export default function Projects() {
         "/images/skills_png/nodejs.svg",
       ],
       projectSrc: "elpatronics.png",
-      x: isMobile ? 150 : -150,
+      x: isMobile ? 100 : -100,
     },
     {
       projectName: "Tinny Sitters",
@@ -40,13 +40,15 @@ export default function Projects() {
         "A babysitter booking web app where users can browse sitters, make bookings, and securely pay via PayPal. It also includes seamless signup, signin, and order confirmation.",
       toolsUsed: [
         "/images/skills_png/react.svg",
+        "/images/skills_png/redux.svg",
         "/images/skills_png/firebase.svg",
         "/images/skills_png/mongodb.svg",
         "/images/skills_png/express.svg",
         "/images/skills_png/nodejs.svg",
+
       ],
       projectSrc: "tinnysitters.png",
-      x: isMobile ? -150 : 150,
+      x: isMobile ? -100 : 100,
     },
     {
       projectName: "Arith-magics",
@@ -54,14 +56,14 @@ export default function Projects() {
         "A web application for math enthusiasts, enabling users to conduct both simple and semi-complex mathematical operations, as well as indulge in random math quotes.",
       toolsUsed: ["/images/skills_png/react.svg"],
       projectSrc: "arithmatician.png",
-      x: 150,
+      x: 100,
     },
     {
       projectName: "JSArrayPlayGround",
       projectDetails: "An application that visualizes array operations.",
       toolsUsed: ["/images/skills_png/react.svg"],
       projectSrc: "",
-      x: -150,
+      x: -100,
     },
     {
       projectName: "Employee Portal",
@@ -69,7 +71,7 @@ export default function Projects() {
         "A frontend application form managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
       toolsUsed: ["/images/skills_png/react.svg"],
       projectSrc: "",
-      x: isMobile ? 150 : -150,
+      x: isMobile ? 100 : -100,
     },
     {
       projectName: "Movie App",
@@ -82,7 +84,7 @@ export default function Projects() {
         "/images/skills_png/nodejs.svg",
       ],
       projectSrc: "",
-      x: isMobile ? -150 : 150,
+      x: isMobile ? -100 : 100,
     },
     {
       projectName: "FlickerFeed",
@@ -93,7 +95,7 @@ export default function Projects() {
         "/images/skills_png/tailwind.svg",
       ],
       projectSrc: "flickrfeed.png",
-      x: 150,
+      x: 100,
     },
   ];
   return (

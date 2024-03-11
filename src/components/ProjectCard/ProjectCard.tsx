@@ -8,7 +8,7 @@ type ProjectCardProps = {
   projectDetails: string;
   children: ReactNode;
   projectSrc:string;
-  x?:number;
+  x:number;
 };
 
 export default function ProjectCard({
@@ -20,10 +20,12 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <motion.div
+
        initial={{ opacity: 0, x: x }}
        animate={{ opacity: 1, x: 0, y: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 1 }}
+     
        className={styles.card_container}>
       <div className={styles.details}>
         <p className={styles.featured}>Featured Project</p>

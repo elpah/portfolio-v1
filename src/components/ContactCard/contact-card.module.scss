@@ -1,6 +1,6 @@
 .contact_card_container {
-  transition: all ease-in-out 0.3s;
   cursor: pointer;
+  transition: all ease-in-out 0.3s;
   width: 100%;
   margin: auto;
   display: flex;
@@ -28,9 +28,15 @@
     .info_header {
       font-size: 18px;
       margin-bottom: 10px;
+      &:hover {
+        color: rgb(208, 154, 247);
+      }
     }
     .info_text {
       font-size: 13px;
+      &:hover {
+        color: rgb(208, 154, 247);
+      }
     }
   }
   &:hover {
