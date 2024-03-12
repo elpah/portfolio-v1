@@ -1,18 +1,26 @@
 "use client";
-import axios from "axios";
 import ContactCard from "@/components/ContactCard/ContactCard";
 import { FieldValues, useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaTelegram } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 import styles from "./contact.module.scss";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm();
 
+  const notify = () => toast('Hello world!', {
+    position: 'top-center' ,
+    autoClose: 2000,
+    className: 'custom-toast',
+  });
   const contactInfo = [
     {
       cardName: "Phone",
@@ -35,28 +43,15 @@ export default function Contact() {
   ];
 
   async function onSubmit(data: FieldValues) {
-    console.log(data.email);
-
-    axios
-      .post(
-        "/api",
-        JSON.stringify({
-          data
-         
-        }),
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.error("Error posting data:", error);
-        throw error;
-      });
+    try {
+      await emailjs.send("service_hu5emdb", "template_cgezxxo", data, "uZUcPqeRan5awHad7");
+      reset();
+      notify();
+    } catch (error) {
+      console.error("Submission failed:", error);
+    }
   }
-
+  
   return (
     <main className={styles.main}>
       <motion.p
@@ -204,8 +199,9 @@ export default function Contact() {
               transition={{ duration: 1 }}
               className={styles.button}
               type="submit"
+              disabled={isSubmitting}
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </motion.button>
           </form>
         </div>
