@@ -8,7 +8,9 @@ import styles from "./contact.module.scss";
 import { ToastContainer, toast } from 'react-toastify';
 
 
+
 export default function Contact() {
+
   const {
     register,
     handleSubmit,
@@ -16,11 +18,7 @@ export default function Contact() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const notify = () => toast('Hello world!', {
-    position: 'top-center' ,
-    autoClose: 2000,
-    className: 'custom-toast',
-  });
+  const notify = () =>{toast.success('Message successfully sent', {});};
   const contactInfo = [
     {
       cardName: "Phone",
@@ -44,9 +42,10 @@ export default function Contact() {
 
   async function onSubmit(data: FieldValues) {
     try {
-      await emailjs.send("service_hu5emdb", "template_cgezxxo", data, "uZUcPqeRan5awHad7");
-      reset();
-      notify();
+      await emailjs.send("service_hu5emdb", "template_cgezxxo", data, "uZUcPqeRan5awHad7").then(()=>{
+        reset();
+        notify();
+      })
     } catch (error) {
       console.error("Submission failed:", error);
     }
@@ -176,7 +175,6 @@ export default function Contact() {
               </label>
               <textarea
                 className={styles.text_area}
-                // type="message"
                 placeholder="Please enter a message"
                 {...register("message", {
                   required: true,
@@ -206,6 +204,15 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <ToastContainer
+          position="bottom-right"
+          autoClose={1000}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable={false}
+        />
     </main>
   );
 }
