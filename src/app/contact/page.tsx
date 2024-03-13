@@ -5,12 +5,9 @@ import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import styles from "./contact.module.scss";
-import { ToastContainer, toast } from 'react-toastify';
-
-
+import { ToastContainer, toast } from "react-toastify";
 
 export default function Contact() {
-
   const {
     register,
     handleSubmit,
@@ -18,39 +15,43 @@ export default function Contact() {
     formState: { errors, isSubmitting },
   } = useForm();
 
-  const notify = () =>{toast.success('Message successfully sent', {});};
+  const notify = () => {
+    toast.success("Message successfully sent", {});
+  };
   const contactInfo = [
     {
       cardName: "Phone",
       cardText: "+31 62 499 165",
       cardIcon: <FaPhone className={styles.CardIcon} />,
-      cardLink: "",
+      cardLink: "tel:+31627499165",
     },
     {
       cardName: "Email",
       cardText: "obengelpachris@gmail.com",
       cardIcon: <FaEnvelope className={styles.CardIcon} />,
-      cardLink: "",
+      cardLink: "mailto:obengelpachris@gmail.com",
     },
     {
       cardName: "Telegram",
-      cardText: "@paruah",
+      cardText: "@paruahh",
       cardIcon: <FaTelegram className={styles.CardIcon} />,
-      cardLink: "",
+      cardLink: "https://t.me/paruahh",
     },
   ];
 
   async function onSubmit(data: FieldValues) {
     try {
-      await emailjs.send("service_hu5emdb", "template_cgezxxo", data, "uZUcPqeRan5awHad7").then(()=>{
-        reset();
-        notify();
-      })
+      await emailjs
+        .send("service_hu5emdb", "template_cgezxxo", data, "uZUcPqeRan5awHad7")
+        .then(() => {
+          reset();
+          notify();
+        });
     } catch (error) {
       console.error("Submission failed:", error);
     }
   }
-  
+
   return (
     <main className={styles.main}>
       <motion.p
@@ -86,6 +87,7 @@ export default function Contact() {
                 key={index}
                 cardName={contact.cardName}
                 cardtext={contact.cardText}
+                cardLink={contact.cardLink}
               >
                 {contact.cardIcon}
               </ContactCard>
@@ -205,14 +207,14 @@ export default function Contact() {
         </div>
       </div>
       <ToastContainer
-          position="bottom-right"
-          autoClose={1000}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable={false}
-        />
+        position="bottom-right"
+        autoClose={1000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable={false}
+      />
     </main>
   );
 }
