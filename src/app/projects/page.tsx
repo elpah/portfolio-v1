@@ -17,13 +17,15 @@ export default function Projects() {
         "/images/skills_png/framermotion.svg",
         "/images/skills_png/sass.svg",
       ],
-      projectSrc: "",
+      projectSrc: "portfolio.webp",
       x: -100,
+      liveLink:"",
+      githubLink:"https://github.com/elpah/portfolio"
     },
     {
       projectName: "Elpatronics",
       projectDetails:
-        "An e-commerce website demonstrating end-to-end shopping experience, including user registration, login authentication, payments via PayPal or Visa checkout, order tracking, and email confirmations.",
+        "An e-commerce website demonstrating the shopping process, including user registration, login authentication, payments via PayPal or Visa, order tracking, and email confirmations.",
       toolsUsed: [
         "/images/skills_png/react.svg",
         "/images/skills_png/firebase.svg",
@@ -31,8 +33,10 @@ export default function Projects() {
         "/images/skills_png/express.svg",
         "/images/skills_png/nodejs.svg",
       ],
-      projectSrc: "elpatronics.png",
+      projectSrc: "elpatronics.webp",
       x: isMobile ? 100 : -100,
+      liveLink:"https://elpahtronics.vercel.app/",
+      githubLink:"https://github.com/elpah/Elpahtronics"
     },
     {
       projectName: "Tinny Sitters",
@@ -47,31 +51,23 @@ export default function Projects() {
         "/images/skills_png/nodejs.svg",
 
       ],
-      projectSrc: "tinnysitters.png",
+      projectSrc: "tinnysitters.webp",
       x: isMobile ? -100 : 100,
+      liveLink:"https://tinysitters.vercel.app/",
+      githubLink:"https://github.com/elpah/tiny-sitters"
     },
     {
-      projectName: "Arith-magics",
+      projectName: "Flickr Image viewer",
       projectDetails:
-        "A web application for math enthusiasts, enabling users to conduct both simple and semi-complex mathematical operations, as well as indulge in random math quotes.",
-      toolsUsed: ["/images/skills_png/react.svg"],
-      projectSrc: "arithmatician.png",
+        "A web application showcasing captivating images sourced from Flickr's public feed. Users can also search for specific images and discover related photos tailored to their input. +",
+      toolsUsed: [
+        "/images/skills_png/next.svg",
+        "/images/skills_png/tailwind.svg",
+      ],
+      projectSrc: "flickrfeed.webp",
       x: 100,
-    },
-    {
-      projectName: "JSArrayPlayGround",
-      projectDetails: "An application that visualizes array operations.",
-      toolsUsed: ["/images/skills_png/react.svg"],
-      projectSrc: "",
-      x: -100,
-    },
-    {
-      projectName: "Employee Portal",
-      projectDetails:
-        "A frontend application form managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
-      toolsUsed: ["/images/skills_png/react.svg"],
-      projectSrc: "",
-      x: isMobile ? 100 : -100,
+      liveLink:"https://flickr-feed-green.vercel.app/",
+      githubLink:"https://github.com/elpah/flickrfeed-Nextjs"
     },
     {
       projectName: "Movie App",
@@ -83,19 +79,30 @@ export default function Projects() {
         "/images/skills_png/express.svg",
         "/images/skills_png/nodejs.svg",
       ],
-      projectSrc: "",
+      projectSrc: "movie-list.webp",
       x: isMobile ? -100 : 100,
+      liveLink:"https://github.com/elpah/the-movie-app",
+      githubLink:"https://github.com/elpah/the-movie-app"
     },
     {
-      projectName: "FlickerFeed",
+      projectName: "Employee Portal",
       projectDetails:
-        "A web application showcasing captivating images sourced from Flickr's public feed. Users can also search for specific images and discover related photos tailored to their input. +",
-      toolsUsed: [
-        "/images/skills_png/next.svg",
-        "/images/skills_png/tailwind.svg",
-      ],
-      projectSrc: "flickrfeed.png",
+        "A frontend application form managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
+      toolsUsed: ["/images/skills_png/react.svg"],
+      projectSrc: "employeeportal.webp",
+      x: isMobile ? 100 : -100,
+      liveLink:"https://employee-portal-iota.vercel.app/",
+      githubLink:"https://github.com/elpah/employee-portal"
+    },
+    {
+      projectName: "Arith-magics",
+      projectDetails:
+        "A web application for math enthusiasts, enabling users to conduct both simple and semi-complex mathematical operations, as well as indulge in random math quotes.",
+      toolsUsed: ["/images/skills_png/react.svg"],
+      projectSrc: "arithmatician.webp",
       x: 100,
+      liveLink:"https://arith-magics.vercel.app/",
+      githubLink:"https://github.com/elpah/Arith-Magics"
     },
   ];
   return (
@@ -117,6 +124,9 @@ export default function Projects() {
             projectName={project.projectName}
             projectDetails={project.projectDetails}
             projectSrc={project.projectSrc}
+            githubLink={project.githubLink}
+            liveLink={project.liveLink}
+            
           >
             {project.toolsUsed.map((tool, index) => (
               <img key={index} src={tool} alt="tool" />

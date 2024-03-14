@@ -79,7 +79,7 @@ export default function About() {
           className={styles.paragraph}
         >
           🎓 Graduated with a Bachelor of Science in Computer Engineering in
-          2022, and currently studying software engineering at 42 Wolfsburg.
+          2022, and currently studying Software Engineering at 42 Wolfsburg.
           <br />
           <br />
           👨‍💻 I specialize in building user-friendly interfaces and creating
@@ -117,7 +117,7 @@ export default function About() {
         </motion.div>
         <img
           className={styles.skills_image}
-          src="/images/skills.png"
+          src="/images/skills.webp"
           alt="skills-image"
         />
       </motion.section>
