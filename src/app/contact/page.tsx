@@ -6,6 +6,9 @@ import { FaPhone, FaEnvelope, FaTelegram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import styles from "./contact.module.scss";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; 
+import Footer from "@/components/Footer/Footer";
+
 
 export default function Contact() {
   const {
@@ -53,6 +56,7 @@ export default function Contact() {
   }
 
   return (
+    <>
     <main className={styles.main}>
       <motion.p
         initial={{ opacity: 0, y: -50 }}
@@ -61,7 +65,7 @@ export default function Contact() {
         transition={{ duration: 1 }}
         className={styles.badge}
       >
-        📞contact me
+        📞contact me...
       </motion.p>
 
       <div className={styles.container}>
@@ -206,15 +210,23 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      
       <ToastContainer
-        position="bottom-right"
-        autoClose={1000}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable={false}
-      />
+          position="bottom-right"
+          autoClose={1000}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable={false}
+          theme="colored"
+          toastStyle={{
+            fontSize: "14px",
+          }}
+         
+        />
     </main>
+    <Footer/>
+   </>
   );
 }

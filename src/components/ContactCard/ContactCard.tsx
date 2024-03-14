@@ -15,7 +15,7 @@ export default function ContactCard({
   children,
 }: CardProps) {
   return (
-    <Link href={cardLink}>
+    <Link target="_blank" href={cardLink}>
     <div className={styles.contact_card_container}>
       <div className={styles.image_container}>{children}</div>
       <div className={styles.info_container}>
