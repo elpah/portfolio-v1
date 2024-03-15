@@ -1,31 +1,34 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import PacmanLoader from "react-spinners/ClipLoader";
+// import PacmanLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@custom-react-hooks/all";
+import { FaLinkedin, FaGithub, FaEnvelope, FaTelegram } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
   const isMobile = useMediaQuery("(max-width: 767px)");
+  const [nameText, setNameText] = useState('');
+  const [index, setIndex] = useState(0);
+   const name = "El-Pachris Obeng";
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
+    if (index < name.length) {
+      const timer = setTimeout(() => {
+        setNameText((prev) => prev + name.charAt(index));
+        setIndex(index + 1);
+      }, 50);
+
+      return () => clearTimeout(timer);
+    }
+  }, [index, name]);
+
+
 
   return (
     <>
-      {/* {loading ? (
-          <PacmanLoader
-          color="red"
-           />
-      ) : ( */}
-      {/* <AnimatePresence> */}
       <motion.div className={styles.main_container}>
         <motion.div
           initial={{
@@ -34,13 +37,12 @@ export default function Home() {
             y: isMobile ? -100 : 0,
           }}
           animate={{ opacity: 1, x: 0, y: 0 }}
-          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
           className={styles.image_container}
         >
           <Image
             className={styles.image}
-            src="/images/pp.jpg"
+            src="/images/pp.webp"
             alt="cartoon-image"
             width={100}
             height={100}
@@ -54,47 +56,80 @@ export default function Home() {
               y: isMobile ? 0 : -50,
             }}
             animate={{ opacity: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 1 }}
             className={styles.badge}
           >
             👋🏽 Hello Real World...
           </motion.p>
-         
-            <motion.h2
-              // initial={{ opacity: 0, x: isMobile ? -150 : -150 }}
-              // animate={{ opacity: 1, x: 0 }}
-              // exit={{ opacity: 0, x: -100 }}
-              // transition={{ duration: 1 }}
-             className={styles.intro_name}>
-              El-Pachris Obeng
-              <span className={styles.cursor}></span>
-            </motion.h2>
-            
+
+          <h1 className={styles.intro_name}>
+            {nameText}
+            <span className={styles.cursor}></span>
+          </h1>
+
           <motion.p
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: isMobile ? 1 : 1.5 }}
+            transition={{ duration:  1 }}
             className={styles.intro_sentence}
           >
             A fullstack Javascript developer dedicated to crafting elegant,
             responsive and user-friendly web applications.
           </motion.p>
-          <motion.div className={styles.cv_container}>
-            <div className={styles.cv_container_2}>
-              <div>Download CV</div>
-              <Image
-                height={20}
-                width={20}
-                src="/images/download-icon.svg"
-                alt="download icon"
-              />
+          <motion.div
+           initial={{
+            opacity: 0,
+            x:  -100,
+          }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1 }}
+           className={styles.socials_container}>
+            <Link href="https://github.com/elpah" target="_blank">
+            <div className={styles.social_container}>
+              <FaGithub className={styles.social} />
             </div>
+            </Link>
+            <Link href="https://www.linkedin.com/in/elpachris/" target="_blank">
+            <div className={styles.social_container}>
+              <FaLinkedin className={styles.social}  />
+            </div>
+            </Link>
+            <Link href="mailto:obengelpachris@gmail.com" target="_blank">
+            <div className={styles.social_container}>
+              <FaEnvelope className={styles.social} />
+            </div>
+            </Link>
+            <Link href="https://t.me/paruahh" target="_blank">
+            <div className={styles.social_container}>
+              <FaTelegram className={styles.social} />
+            </div>
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y:  100,
+            }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+           className={styles.cv_container}>
+            <a
+              href="/documents/CV_EL-PACHRIS_OBENG.pdf"
+              download="CV_EL-PACHRIS_OBENG.pdf"
+            >
+              <div className={styles.cv_container_2}>
+                <div>Download CV</div>
+                <Image
+                  height={20}
+                  width={20}
+                  src="/images/download-icon.svg"
+                  alt="download icon"
+                />
+              </div>
+            </a>
           </motion.div>
         </div>
       </motion.div>
-      {/* </AnimatePresence> */}
     </>
   );
 }

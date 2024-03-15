@@ -1,12 +1,5 @@
-@font-face {
-  font-family: "logoname";
-  src: url("/assets/fonts/remarcle-font/Remarcle-lBx0.tff") format("truetype");
-  // font-weight: normal;
-  // font-style: normal;
-}
-
 .container {
-  position: relative;
+  position: fixed;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   width: 100%;
@@ -16,12 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 1px 4px 17px -5px rgba(0, 0, 0, 0.88);
+  box-shadow: 1px 4px 17px -5px rgba(244, 209, 255, 0.2);
+  z-index: 1;
 
   .logo_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     .logo_container_img {
       height: 50px;
@@ -30,29 +25,29 @@
       margin-right: 10px;
     }
   }
+
   .container_list {
+    background-color: #1c1d30;
+    width: 100%;
     position: absolute;
     top: 90px;
-    width: 100%;
-    margin-left: -20px;
-    list-style: none;
-    background-color: #1c1d30;
-    display: flex;
-    flex-direction: column;
-    max-height: 0;
-    transition: max-height 0.1s ease-out;
-    overflow: hidden;
+    left: 0;
+    display: none;
+    z-index: 999999;
 
     .container_list_items {
-      color: white;
       text-align: right;
+      list-style: none;
+      color: white;
       border-top: 0.1px solid rgb(43, 43, 43);
       padding: 20px;
+
       cursor: pointer;
     }
   }
-  .slideDown {
-    max-height: 300px;
+
+  .display {
+    display: block;
   }
   .container_hamburger {
     padding-top: 3px;
@@ -68,14 +63,17 @@
     justify-content: space-between;
 
     .container_list {
-      width: auto;
+      display: flex;
+      flex-direction: row;
       position: relative;
       margin-top: -170px;
-      flex-direction: row;
       background-color: inherit;
-
+      width: auto;
+      .display-none {
+        display: flex;
+      }
       .container_list_items {
-        color: #9c9c9c;
+        color: #c8c8c8;
         margin-right: 10px;
         border-top: none;
         padding: 0;

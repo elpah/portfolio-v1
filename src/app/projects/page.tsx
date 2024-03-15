@@ -110,7 +110,6 @@ export default function Projects() {
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        exit={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
         className={styles.badge}
       >

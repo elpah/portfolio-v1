@@ -6,6 +6,7 @@
   width: 90%;
   min-height: 100vh;
   margin: auto;
+  margin-top: 100px;
 
   .image_container {
     margin-top: 50px;
@@ -19,48 +20,66 @@
   }
   .intro_container {
     position: relative;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 18px;
     .badge {
       padding: 8px;
       border-radius: 8px;
       color: #7b4ae2;
       background-color: #1d142b;
-      width: 220px;
+      width: 210px;
+      margin: auto;
+      animation: glow 1s infinite;
     }
 
     .intro_name {
       color: #fff;
 
-      margin-top: 30px;
-      margin-bottom: 10px;
       font-size: 35px;
-      overflow: hidden;
-      white-space: nowrap;
+      margin: 15px auto 10px;
+      text-align: center;
       border-right: 2px solid transparent;
-      animation: typing 2s steps(17) forwards;
       display: flex;
+      justify-content: center;
       align-items: center;
+
       .cursor {
         margin-top: 10px;
         margin-left: 2px;
         display: inline-block;
         width: 4px;
-        height: 60px;
+        height: 40px;
         background-color: #fff;
         animation: blinkCursor 1.2s infinite steps(2);
       }
     }
 
     .intro_sentence {
+      text-align: center;
       font-size: 18px;
-      /* font-family: inter; */
       font-weight: 300;
       line-height: 1.5;
-      color: #9c9c9c;
+      color: #e7e7e7;
+    }
+    .socials_container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      /* max-width: 40%; */
+      .social_container {
+        border: 0.01px solid rgb(233, 207, 255);
+        margin: 10px;
+        padding: 8px 10px 6px;
+        border-radius: 2px;
+        .social {
+          z-index: 100;
+          font-size: 21px;
+          color: rgb(240, 236, 249);
+        }
+      }
     }
     .cv_container {
-      margin-top: 50px;
+      margin-top: 30px;
       justify-content: center;
       display: flex;
 
@@ -99,14 +118,35 @@
       margin-top: 0;
       .badge {
         font-size: 20px;
-        width: 240px;
+        width: 220px;
+        margin: 0;
       }
       .intro_name {
         font-size: 40px;
+        justify-content: flex-start;
       }
       .intro_sentence {
         font-size: 18px;
+        text-align: left;
       }
+      .socials_container {
+        cursor: pointer;
+        justify-content: flex-start;
+        margin-top: 15px;
+
+        .social_container {
+          transition: all 0.2s ease-in-out;
+        }
+        .social_container:hover {
+          box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.6);
+          transform: scale(1.06);
+        }
+
+        .social_container:first-child {
+          margin-left: 0;
+        }
+      }
+
       .cv_container {
         position: absolute;
         left: 0;
@@ -134,9 +174,12 @@
     .intro_container {
       .intro_name {
         font-size: 55px;
+        .cursor {
+          height: 60px;
+        }
       }
       .intro_sentence {
-        font-size: 24px;
+        font-size: 22px;
       }
     }
   }
@@ -151,15 +194,7 @@
     transform: translateY(-8px);
   }
 }
-@keyframes typing {
-  from,
-  to {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
+
 @keyframes blinkCursor {
   0%,
   49.9% {
@@ -168,5 +203,17 @@
   50%,
   100% {
     visibility: hidden;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(123, 74, 226, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(123, 74, 226, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(123, 74, 226, 0.5);
   }
 }
