@@ -61,7 +61,6 @@ export default function Contact() {
       <motion.p
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        exit={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
         className={styles.badge}
       >
@@ -72,8 +71,7 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
+            transition={{ duration: 1 }}
           className={styles.contact_info_container}
         >
           <h2 className={styles.contact_info_header}>Contact Information</h2>
@@ -104,8 +102,7 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
+                    transition={{ duration: 1 }}
               className={styles.inputContainer}
             >
               <label className={styles.label} htmlFor="name">
@@ -126,7 +123,6 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
               className={styles.inputContainer}
             >
@@ -155,7 +151,6 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
               className={styles.inputContainer}
             >
@@ -172,7 +167,6 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 1 }}
               className={styles.inputContainer}
             >
@@ -199,7 +193,6 @@ export default function Contact() {
             <motion.button
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
               transition={{ duration: 1 }}
               className={styles.button}
               type="submit"

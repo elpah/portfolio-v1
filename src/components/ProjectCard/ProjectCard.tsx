@@ -28,7 +28,6 @@ export default function ProjectCard({
     <motion.div
       initial={{ opacity: 0, x: x }}
       animate={{ opacity: 1, x: 0, y: 0 }}
-      exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 1 }}
       className={styles.card_container}
     >

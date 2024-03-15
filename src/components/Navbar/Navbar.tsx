@@ -43,7 +43,7 @@ export default function Navbar() {
       initial={{ opacity: 0, x: 150 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
-        className={`${styles.container_list} ${isOpen ? styles.slideDown : ""}`}
+      className={`${styles.container_list} ${isOpen ? styles.slideDown : ""}`}
       >
         <li
           className={styles.container_list_items}

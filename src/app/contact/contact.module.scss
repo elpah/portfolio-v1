@@ -4,6 +4,7 @@
   color: rgb(198, 198, 198);
 
   .badge {
+    animation: glow 1s infinite alternate;
     width: 140px;
     max-width: 200px;
     margin-top: 50px;
@@ -178,5 +179,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(218, 102, 250, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(218, 102, 250, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(218, 102, 250, 0.3);
   }
 }
