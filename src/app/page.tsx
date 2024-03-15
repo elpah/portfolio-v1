@@ -9,7 +9,6 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaTelegram } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Home() {
-  const [_loading, setLoading] = useState(false);
   const isMobile = useMediaQuery("(max-width: 767px)");
   const [nameText, setNameText] = useState('');
   const [index, setIndex] = useState(0);
@@ -20,19 +19,13 @@ export default function Home() {
       const timer = setTimeout(() => {
         setNameText((prev) => prev + name.charAt(index));
         setIndex(index + 1);
-      }, 80);
+      }, 50);
 
       return () => clearTimeout(timer);
     }
   }, [index, name]);
 
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
 
   return (
     <>
@@ -77,13 +70,20 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: isMobile ? 1 : 1.5 }}
+            transition={{ duration:  1 }}
             className={styles.intro_sentence}
           >
             A fullstack Javascript developer dedicated to crafting elegant,
             responsive and user-friendly web applications.
           </motion.p>
-          <div className={styles.socials_container}>
+          <motion.div
+           initial={{
+            opacity: 0,
+            x:  -100,
+          }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1 }}
+           className={styles.socials_container}>
             <Link href="https://github.com/elpah" target="_blank">
             <div className={styles.social_container}>
               <FaGithub className={styles.social} />
@@ -104,8 +104,15 @@ export default function Home() {
               <FaTelegram className={styles.social} />
             </div>
             </Link>
-          </div>
-          <motion.div className={styles.cv_container}>
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y:  100,
+            }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+           className={styles.cv_container}>
             <a
               href="/documents/CV_EL-PACHRIS_OBENG.pdf"
               download="CV_EL-PACHRIS_OBENG.pdf"

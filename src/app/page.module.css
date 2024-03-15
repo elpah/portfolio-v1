@@ -6,6 +6,7 @@
   width: 90%;
   min-height: 100vh;
   margin: auto;
+  margin-top: 100px;
 
   .image_container {
     margin-top: 50px;
@@ -26,12 +27,14 @@
       border-radius: 8px;
       color: #7b4ae2;
       background-color: #1d142b;
-      width: 200px;
+      width: 210px;
       margin: auto;
-      animation: glow 1s infinite alternate;
+      animation: glow 1s infinite;
     }
 
     .intro_name {
+      color: #fff;
+
       font-size: 35px;
       margin: 15px auto 10px;
       text-align: center;
@@ -69,6 +72,7 @@
         padding: 8px 10px 6px;
         border-radius: 2px;
         .social {
+          z-index: 100;
           font-size: 21px;
           color: rgb(240, 236, 249);
         }

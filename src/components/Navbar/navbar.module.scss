@@ -1,5 +1,5 @@
 .container {
-  position: relative;
+  position: fixed;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   width: 100%;
@@ -9,7 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 1px 4px 17px -5px rgba(244, 209, 255, 0.3);
+  box-shadow: 1px 4px 17px -5px rgba(244, 209, 255, 0.2);
+  z-index: 1;
 
   .logo_container {
     display: flex;
@@ -32,8 +33,7 @@
     top: 90px;
     left: 0;
     display: none;
-    z-index: 10;
-    // box-shadow: 1px 4px 17px -5px rgba(217, 137, 241, 0.8);
+    z-index: 999999;
 
     .container_list_items {
       text-align: right;

@@ -1,7 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useMediaQuery } from "@custom-react-hooks/all";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
@@ -75,6 +74,9 @@ export default function Navbar() {
         </Link>
       </motion.ul>
       <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
         className={styles.container_hamburger}
         onClick={() => setIsOpen(!isOpen)}
       >

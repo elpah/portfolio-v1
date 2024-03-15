@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 100vh;
+  margin-top: 100px;
 
   .badge {
     animation: glow 1s infinite alternate;
