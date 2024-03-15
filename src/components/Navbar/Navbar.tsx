@@ -34,7 +34,7 @@ export default function Navbar() {
        className={styles.logo_container}>
         <img
           className={styles.logo_container_img}
-          src="/images/logo-image.jpg"
+          src="/images/logo_icon.png"
           alt="Image"
         />
         <h2 style={myfont.style} className={styles.logo_container_name}>EL-PACHRIS</h2>
