@@ -79,7 +79,7 @@ export default function Contact() {
             If you have any questions, thoughts, or simply want to reach out,
             feel free to use the form. I'm available to assist you with anything
             you require. Whether you have a specific project in mind, or just
-            fancy a chat, don't hesitate to reach out. I'm eager to hear from
+            fancy a chat, don&apos;t hesitate to reach out. I&apos;m eager to hear from
             you!
           </p>
           <span className={styles.bar}></span>

@@ -48,7 +48,7 @@ export default function About() {
         transition: { duration: 1 },
       });
     }
-  }, [inView]);
+  }, [animation,inView]);
 
   return (
     <main className={styles.main_container}>
