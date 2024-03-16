@@ -77,7 +77,7 @@ export default function Contact() {
           <h2 className={styles.contact_info_header}>Contact Information</h2>
           <p className={styles.contact_info_paragraph}>
             If you have any questions, thoughts, or simply want to reach out,
-            feel free to use the form. I'm available to assist you with anything
+            feel free to use the form. I&apos;m available to assist you with anything
             you require. Whether you have a specific project in mind, or just
             fancy a chat, don&apos;t hesitate to reach out. I&apos;m eager to hear from
             you!
