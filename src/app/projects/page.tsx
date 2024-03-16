@@ -59,7 +59,7 @@ export default function Projects() {
     {
       projectName: "Flickr Image viewer",
       projectDetails:
-        "A web application showcasing captivating images sourced from Flickr's public feed. Users can also search for specific images and discover related photos tailored to their input. +",
+        "A web application showcasing captivating images sourced from Flickr's public feed. Users can also search for specific images and discover related photos tailored to their input.",
       toolsUsed: [
         "/images/skills_png/next.svg",
         "/images/skills_png/tailwind.svg",
@@ -68,6 +68,16 @@ export default function Projects() {
       x: 100,
       liveLink:"https://flickr-feed-green.vercel.app/",
       githubLink:"https://github.com/elpah/flickrfeed-Nextjs"
+    },
+    {
+      projectName: "Employee Portal",
+      projectDetails:
+        "A frontend application for managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
+      toolsUsed: ["/images/skills_png/react.svg"],
+      projectSrc: "employeeportal.webp",
+      x: isMobile ? 100 : -100,
+      liveLink:"https://employee-portal-iota.vercel.app/",
+      githubLink:"https://github.com/elpah/employee-portal"
     },
     {
       projectName: "Movie App",
@@ -84,16 +94,7 @@ export default function Projects() {
       liveLink:"https://github.com/elpah/the-movie-app",
       githubLink:"https://github.com/elpah/the-movie-app"
     },
-    {
-      projectName: "Employee Portal",
-      projectDetails:
-        "A frontend application form managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
-      toolsUsed: ["/images/skills_png/react.svg"],
-      projectSrc: "employeeportal.webp",
-      x: isMobile ? 100 : -100,
-      liveLink:"https://employee-portal-iota.vercel.app/",
-      githubLink:"https://github.com/elpah/employee-portal"
-    },
+   
     {
       projectName: "Arith-magics",
       projectDetails:
