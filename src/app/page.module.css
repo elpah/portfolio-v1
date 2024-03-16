@@ -102,7 +102,7 @@
 
 @media (min-width: 767px) {
   .main_container {
-    margin-top: -10%;
+    margin-top: 3%;
     flex-direction: row;
     width: 80%;
 
@@ -164,6 +164,7 @@
 
 @media (min-width: 1024px) {
   .main_container {
+    margin-top: -0.5%;
     .image_container {
       margin-top: 50px;
       .image {
