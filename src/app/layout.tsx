@@ -23,6 +23,8 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+         {/* meta data for freelancehunt account confirmation */}
+
         <meta name="freelancehunt" content="260e3d318cb63a8" />
       </head>
 
