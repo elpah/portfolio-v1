@@ -16,12 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        rel="icon"
-        href="/images/icon2.png"
-        type="image/<generated>"
-        sizes="<generated>"
-      />
+      <head>
+        <link
+          rel="icon"
+          href="/images/icon2.png"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <meta name="freelancehunt" content="260e3d318cb63a8" />
+      </head>
 
       <body className={open_sans.className}>
         <Navbar />
