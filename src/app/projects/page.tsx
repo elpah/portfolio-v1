@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const isMobile = useMediaQuery("(max-width: 767px)");
-// lovelifecoach.webp
   const projects = [
     {
       projectName: "LoveLifeCoach",
