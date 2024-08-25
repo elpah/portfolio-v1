@@ -19,7 +19,7 @@ export default function Projects() {
       ],
       projectSrc: "lovelifecoach.webp",
       x: -100,
-      liveLink: "http://www.lovelifecoach.vercel.app",  
+      liveLink: "https://www.lovelifecoach.vercel.app",  
       githubLink: "https://github.com/elpah/lovelifecoach/"
     },    
     {
