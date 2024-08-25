@@ -6,8 +6,22 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const isMobile = useMediaQuery("(max-width: 767px)");
-
+// lovelifecoach.webp
   const projects = [
+    {
+      projectName: "LoveLifeCoach",
+      projectDetails:
+        "A user-friendly website designed and created for a counsellor to connect with clients, showcase their services, and provide valuable resources for personal growth and support.",
+      toolsUsed: [
+        "/images/skills_png/next.svg",
+        "/images/skills_png/framermotion.svg",
+        "/images/skills_png/sass.svg",
+      ],
+      projectSrc: "lovelifecoach.webp",
+      x: -100,
+      liveLink: "http://www.lovelifecoach.vercel.app",  
+      githubLink: "https://github.com/elpah/lovelifecoach/"
+    },    
     {
       projectName: "Portfolio",
       projectDetails:
