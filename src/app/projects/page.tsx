@@ -8,6 +8,25 @@ export default function Projects() {
   const isMobile = useMediaQuery("(max-width: 767px)");
   const projects = [
     {
+      projectName: "ZaurAutos",
+      projectDetails:
+      
+        "(In Progress) A freelance project for a car company",
+      toolsUsed: [
+        "/images/skills_png/react.svg",
+        "/images/skills_png/sass.svg",
+        "/images/skills_png/express.svg",
+        "/images/skills_png/nodejs.svg",
+        "/images/skills_png/mongodb.svg",
+
+
+      ],
+      projectSrc: "zaurautos.webp",
+      x: -100,
+      liveLink: "https://github.com/elpah/autosnl",  
+      githubLink: "https://github.com/elpah/autosnl"
+    }, 
+    {
       projectName: "LoveLifeCoach",
       projectDetails:
         "A user-friendly website designed and created for a counsellor to connect with clients, showcase their services, and provide valuable resources for personal growth and support.",
