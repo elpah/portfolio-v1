@@ -1,5 +1,6 @@
 .main {
   width: 90%;
+  max-width:1400px;
   margin: auto;
   color: rgb(198, 198, 198);
   margin-top: 100px;
@@ -132,7 +133,7 @@
     width: 90%;
     .badge {
       font-size: 20px;
-      width: 160px;
+      width: auto;
     }
     .container {
       flex-direction: row;

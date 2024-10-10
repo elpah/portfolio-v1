@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-// import PacmanLoader from "react-spinners/ClipLoader";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@custom-react-hooks/all";
@@ -24,7 +23,6 @@ export default function Home() {
       return () => clearTimeout(timer);
     }
   }, [index, name]);
-
 
 
   return (

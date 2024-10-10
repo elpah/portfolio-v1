@@ -17,6 +17,7 @@ export default function Navbar() {
   };
 
   return (
+    <header className={styles.nav_cover}>
     <nav className={styles.container}>
       <Link  href={"/"} ><motion.div
         initial={{ opacity: 0, x: -150 }}
@@ -83,5 +84,6 @@ export default function Navbar() {
         {isOpen ? <FaTimes /> : <FaBars />}
       </motion.div>
     </nav>
+    </header>
   );
 }

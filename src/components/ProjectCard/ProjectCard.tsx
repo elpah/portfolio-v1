@@ -25,11 +25,13 @@ export default function ProjectCard({
   children,
 }: ProjectCardProps) {
   return (
+  <Link href={liveLink} target="_blank"> 
     <motion.div
       initial={{ opacity: 0, x: x }}
       animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 1 }}
       className={styles.card_container}
+      
     >
       <div className={styles.details}>
         <p className={styles.featured}>Featured Project</p>
@@ -65,5 +67,6 @@ export default function ProjectCard({
         />
       </div>
     </motion.div>
+    </Link>
   );
 }

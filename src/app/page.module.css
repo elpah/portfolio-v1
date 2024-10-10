@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 90%;
+  max-width: 1400px;
   height: 50vh;
   margin: auto;
   margin-top: 100px;
@@ -104,7 +105,7 @@
   .main_container {
     margin-top: 3%;
     flex-direction: row;
-    width: 80%;
+    /* justify-content: space-between; */
 
     .image_container {
       margin-top: 0;
@@ -165,6 +166,7 @@
 @media (min-width: 1024px) {
   .main_container {
     margin-top: -0.5%;
+    width: 80%;
     .image_container {
       margin-top: 50px;
       .image {
