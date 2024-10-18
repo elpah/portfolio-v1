@@ -47,3 +47,4 @@ To clone and run this project locally, follow these steps:
 Continuously evolving, this portfolio website will be regularly updated with additional projects and to provide visitors with fresh insights into my capabilities and experiences. Stay tuned for exciting updates!
 
 Feel free to contribute, suggest improvements, or report issues. Your feedback is greatly appreciated!
+
