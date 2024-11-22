@@ -12,19 +12,19 @@ export default function About() {
   const animation = useAnimation();
 
   const skills = [
-    { skillName: "next", imageSrc: "next.svg", delay: 0.1 },
-    { skillName: "react", imageSrc: "react.svg" },
-    { skillName: "typescript", imageSrc: "typescript.svg", delay: 0.2 },
-    { skillName: "javascript", imageSrc: "js.png", delay: 0.3 },
-    { skillName: "c", imageSrc: "c.svg", delay: 0.4 },
-    { skillName: "nodejs", imageSrc: "nodejs.svg", delay: 0.8 },
-    { skillName: "mongodb", imageSrc: "mongodb.svg", delay: 0.9 },
-    { skillName: "mysql", imageSrc: "sql.svg", delay: 1 },
-    { skillName: "express", imageSrc: "express.svg", delay: 1.1 },
-    { skillName: "firebase", imageSrc: "firebase.svg", delay: 1.2 },
-    { skillName: "figma", imageSrc: "figma.svg", delay: 1.4 },
-    { skillName: "tailwind", imageSrc: "tailwind.svg", delay: 1.5 },
-    { skillName: "sass", imageSrc: "sass.svg", delay: 1.6 },
+    { skillName: "Next.js", imageSrc: "next.svg", delay: 0.1 },
+    { skillName: "React", imageSrc: "react.svg" },
+    { skillName: "Typescript", imageSrc: "typescript.svg", delay: 0.2 },
+    { skillName: "Javascript", imageSrc: "js.png", delay: 0.3 },
+    { skillName: "C", imageSrc: "c.svg", delay: 0.4 },
+    { skillName: "Node.js", imageSrc: "nodejs.svg", delay: 0.8 },
+    { skillName: "MongoDB", imageSrc: "mongodb.svg", delay: 0.9 },
+    { skillName: "MySql", imageSrc: "sql.svg", delay: 1 },
+    { skillName: "Express", imageSrc: "express.svg", delay: 1.1 },
+    { skillName: "Firebase", imageSrc: "firebase.svg", delay: 1.2 },
+    { skillName: "Figma", imageSrc: "figma.svg", delay: 1.4 },
+    { skillName: "Tailwind", imageSrc: "tailwind.svg", delay: 1.5 },
+    { skillName: "Sass", imageSrc: "sass.svg", delay: 1.6 },
   ];
 
   useEffect(() => {

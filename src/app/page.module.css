@@ -61,6 +61,9 @@
       font-weight: 300;
       line-height: 1.5;
       color: #e7e7e7;
+      .bold_text {
+        font-weight: 700;
+      }
     }
     .socials_container {
       display: flex;

@@ -71,8 +71,7 @@ export default function Home() {
             transition={{ duration:  1 }}
             className={styles.intro_sentence}
           >
-            A fullstack Javascript developer dedicated to crafting elegant,
-            responsive and user-friendly web applications.
+           I am a Software Developer proficient in both Frontend <span className={styles.bold_text}>(React, Typescript, NextJS)</span> and backend <span  className={styles.bold_text}>(Node.js, Express, REST API)</span>. Additional skills include <span className={styles.bold_text}>MongoDB, SQL, Firebase, Git, GitHub, </span>and familiarity with <span className={styles.bold_text}>Agile methodologies.</span>
           </motion.p>
           <motion.div
            initial={{
