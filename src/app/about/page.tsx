@@ -17,20 +17,14 @@ export default function About() {
     { skillName: "typescript", imageSrc: "typescript.svg", delay: 0.2 },
     { skillName: "javascript", imageSrc: "js.png", delay: 0.3 },
     { skillName: "c", imageSrc: "c.svg", delay: 0.4 },
-    { skillName: "c++", imageSrc: "cpp.png", delay: 0.5 },
-    { skillName: "powershell", imageSrc: "shell.svg", delay: 0.6 },
-    { skillName: "git", imageSrc: "git.svg", delay: 0.7 },
     { skillName: "nodejs", imageSrc: "nodejs.svg", delay: 0.8 },
     { skillName: "mongodb", imageSrc: "mongodb.svg", delay: 0.9 },
     { skillName: "mysql", imageSrc: "sql.svg", delay: 1 },
     { skillName: "express", imageSrc: "express.svg", delay: 1.1 },
     { skillName: "firebase", imageSrc: "firebase.svg", delay: 1.2 },
-    { skillName: "framermotion", imageSrc: "framermotion.svg", delay: 1.3 },
     { skillName: "figma", imageSrc: "figma.svg", delay: 1.4 },
     { skillName: "tailwind", imageSrc: "tailwind.svg", delay: 1.5 },
     { skillName: "sass", imageSrc: "sass.svg", delay: 1.6 },
-    { skillName: "html", imageSrc: "html5.svg", delay: 1.7 },
-    { skillName: "css", imageSrc: "css.svg", delay: 1.8 },
   ];
 
   useEffect(() => {
