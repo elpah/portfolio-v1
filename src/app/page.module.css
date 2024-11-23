@@ -91,14 +91,16 @@
         color: #7b4ae2;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #7b4ae2;
         border-radius: 8px;
         padding: 8px;
         animation: bounce 1s infinite;
-      }
-      .download_icon {
-        font-size: 1.5em;
-        font-weight: 100;
+        .download_icon {
+          font-size: 1.5em;
+          font-weight: 100;
+        }
       }
     }
   }

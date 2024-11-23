@@ -116,12 +116,14 @@ export default function Home() {
             >
               <div className={styles.cv_container_2}>
                 <div>Download CV</div>
+                <div className={styles.download_icon}>
                 <Image
                   height={20}
                   width={20}
                   src="/images/download-icon.svg"
                   alt="download icon"
                 />
+                </div>
               </div>
             </a>
           </motion.div>
