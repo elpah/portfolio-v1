@@ -25,17 +25,16 @@ export default function ProjectCard({
   githubLink,
 }: ProjectCardProps) {
   return (
-    <motion.div 
-    onClick={() => {
-      window.open(`${liveLink}`, "_blank");
-    }}
-    initial={{ opacity: 0, x: x }}
-    animate={{ opacity: 1, x: 0, y: 0 }}
-    transition={{ duration: 1 }}
-    className={styles.wrapper}>
-      <div
-        className={styles.card_container}
-      >
+    <motion.div
+      onClick={() => {
+        window.open(`${liveLink}`, "_blank");
+      }}
+      initial={{ opacity: 0, x: x }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 1 }}
+      className={styles.wrapper}
+    >
+      <div className={styles.card_container}>
         <div className={styles.details}>
           <p className={styles.featured}>Featured Project</p>
           <h2 className={styles.header}>{projectName}</h2>
@@ -65,7 +64,12 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={styles.redirect_container}>
-          <div className={styles.link_container}>
+          <div
+            onClick={() => {
+              window.open(`${githubLink}`, "_blank");
+            }}
+            className={styles.link_container}
+          >
             <div className={styles.link_image_container}>
               <Image
                 height={15}
@@ -76,11 +80,16 @@ export default function ProjectCard({
             </div>
             <p className={styles.link_text}>Github</p>
           </div>
-          <div className={styles.link_container}>
+          <div
+            onClick={() => {
+              window.open(`${liveLink}`, "_blank");
+            }}
+            className={styles.link_container}
+          >
             <div className={styles.link_image_container}>
-             <FaExternalLinkAlt className={styles.redirect}/>
+              <FaExternalLinkAlt className={styles.redirect} />
             </div>
-            <p  className={styles.link_text}>Live</p>
+            <p className={styles.link_text}>Live</p>
           </div>
         </div>
       </div>
