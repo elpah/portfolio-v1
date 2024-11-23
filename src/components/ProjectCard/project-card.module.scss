@@ -1,61 +1,85 @@
-.card_container {
+.wrapper {
   background-color: rgba(124, 86, 134, 0.2);
   box-shadow: 0px 0px 10px 0px rgba(223, 181, 242, 0.6);
-  padding: 12px;
+  padding: 12px 12px 0 12px;
   border-radius: 10px;
-  transition: all ease-in-out 0.3s;
   cursor: pointer;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  align-items: center;
-  margin-bottom: 20px;
+  .card_container {
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 
-  .details {
-    width: 100%;
-    position: relative;
+    .details {
+      width: 100%;
+      position: relative;
 
-    .featured {
-      color: #9857d3;
-      font-size: 10px;
-    }
-
-    .header {
-      color: #fff;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .about_project {
-      color: #fff;
-      position: absolute;
-      min-width: 130%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-
-      .about_project_text {
-        line-height: 1.3em;
+      .featured {
+        color: #9857d3;
         font-size: 10px;
       }
+
+      .header {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .about_project {
+        color: #fff;
+        position: absolute;
+        min-width: 130%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+
+        .about_project_text {
+          line-height: 1.3em;
+          font-size: 10px;
+        }
+      }
     }
-    .tools_redirect_container {
+
+    .image_container {
+      width: 100%;
+      padding-top: 15px 0 0 15px;
+      border-radius: 8px;
+      background-color: rgba(227, 127, 251, 0.2);
+    }
+
+    .project_image {
+      width: 100%;
+      height: 100%;
+      max-height: 250px;
+      min-height: 150px;
+      object-fit: cover;
+      border-radius: 8px 0 8px 0;
+    }
+  }
+  .tools_redirect_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .tools_used {
+      width: 60%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      margin-top: 95px;
-      padding: 15px 10px;
-      .tools_used {
-        width: 65%;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .tool_item {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid #fff;
+        padding: 5px;
+        border-radius: 5px;
 
         .tools_image {
           padding: 2px;
@@ -63,64 +87,50 @@
           height: 23px;
           margin-right: 5px;
         }
+        .tool_name {
+          font-size: 10px;
+          color: #dcdcdc;
+        }
       }
-      .redirect_icon_container {
+    }
+    .redirect_container {
+      display: flex;
+      justify-content: flex-end;
+      width: 30%;
+      gap: 5px;
+
+      .link_container {
+        height: 35px;
+        border: 1px solid #7a7a7a;
         display: flex;
-        justify-content: flex-end;
-        width: 30%;
-        padding: 2px;
-        .icon {
-          font-size: 20px;
-          color: #7d39bd;
-          transition: all ease-in-out 0.2s;
-          margin-right: 7px;
-          &:hover {
-            color: #b176e8;
-            transform: scale(1.1);
+        align-items: center;
+        padding: 5px;
+        gap: 5px;
+        .link_image_container {
+          .redirect {
+            width: 15px;
+            height: 15px;
+            color: rgb(185, 183, 183);
           }
         }
 
-        .github_icon {
-          align-items: center;
-          height: 21px;
-          width: 21px;
-          border-radius: 50%;
-          transition: all ease-in-out 0.2s;
-          background-color: #d7b6fa;
-
-          &:hover {
-            background-color: #eee0fd;
-            transform: scale(1.1);
-          }
+        .link_text {
+          font-size: 10px;
         }
       }
     }
   }
-
-  .image_container {
-    width: 100%;
-    padding: 15px 0 0 15px;
-    border-radius: 8px;
-    background-color: rgba(227, 127, 251, 0.2);
-  }
-
-  .project_image {
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    min-height: 150px;
-    object-fit: cover;
-    border-radius: 8px 0 8px 0;
-  }
 }
 
 @media (min-width: 200px) and (max-width: 400px) {
-  .card_container {
-    transition: all ease-in-out 0.3;
-    .details {
-      .about_project {
-        .about_project_text {
-          font-size: 8px;
+  .wrapper {
+    .card_container {
+      transition: all ease-in-out 0.3;
+      .details {
+        .about_project {
+          .about_project_text {
+            font-size: 8px;
+          }
         }
       }
     }
@@ -128,48 +138,50 @@
 }
 
 @media (min-width: 767px) {
-  .card_container {
-    .details {
-      .featured {
-        font-size: 12px;
-      }
-
-      .header {
-        font-size: 20px;
-      }
-      .about_project {
-        padding: 10px;
-
-        .about_project_text {
-          font-size: 11px;
+  .wrapper {
+    .card_container {
+      .details {
+        .featured {
+          font-size: 12px;
         }
-      }
-      .tools_redirect_container {
-        margin-top: 105px;
+
+        .header {
+          font-size: 20px;
+        }
+        .about_project {
+          padding: 10px;
+
+          .about_project_text {
+            font-size: 11px;
+          }
+        }
+        .tools_redirect_container {
+          margin-top: 105px;
+        }
       }
     }
   }
 }
 @media (min-width: 1024px) {
-  .card_container {
-    width: 95%;
-
-    .details {
-      .header {
-        font-size: 25px;
-      }
-      .about_project {
-        .about_project_text {
-          font-size: 12px;
+  .wrapper {
+    .card_container {
+      .details {
+        .header {
+          font-size: 25px;
         }
-      }
-      .tools_redirect_container {
-        margin-top: 110px;
+        .about_project {
+          .about_project_text {
+            font-size: 12px;
+          }
+        }
+        .tools_redirect_container {
+          margin-top: 110px;
 
-        .tools_used {
-          .tools_image {
-            width: 25px;
-            height: 25px;
+          .tools_used {
+            .tools_image {
+              width: 25px;
+              height: 25px;
+            }
           }
         }
       }
