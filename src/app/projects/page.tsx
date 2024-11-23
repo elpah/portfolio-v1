@@ -11,7 +11,7 @@ export default function Projects() {
       projectName: "ZaurAutos",
       projectDetails:
       
-        "(In Progress) A freelance project for a car company",
+        "A MERN Stack (MongoDB, Express, React , Nodejs) web application for a car coompany",
       toolsUsed: [
         "/images/skills_png/react.svg",
         "/images/skills_png/sass.svg",
@@ -50,7 +50,7 @@ export default function Projects() {
         "/images/skills_png/sass.svg",
       ],
       projectSrc: "portfolio.webp",
-      x: -100,
+      x: 100,
       liveLink:"",
       githubLink:"https://github.com/elpah/portfolio"
     },
@@ -66,7 +66,7 @@ export default function Projects() {
         "/images/skills_png/nodejs.svg",
       ],
       projectSrc: "elpatronics.webp",
-      x: isMobile ? 100 : -100,
+      x:100,
       liveLink:"https://elpahtronics.vercel.app/",
       githubLink:"https://github.com/elpah/Elpahtronics"
     },
@@ -84,7 +84,7 @@ export default function Projects() {
 
       ],
       projectSrc: "tinnysitters.webp",
-      x: isMobile ? -100 : 100,
+      x: -100,
       liveLink:"https://tinysitters.vercel.app/",
       githubLink:"https://github.com/elpah/tiny-sitters"
     },
@@ -97,7 +97,7 @@ export default function Projects() {
         "/images/skills_png/tailwind.svg",
       ],
       projectSrc: "flickrfeed.webp",
-      x: 100,
+      x: -100,
       liveLink:"https://flickr-feed-green.vercel.app/",
       githubLink:"https://github.com/elpah/flickrfeed-Nextjs"
     },
@@ -107,7 +107,7 @@ export default function Projects() {
         "A frontend application for managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
       toolsUsed: ["/images/skills_png/react.svg"],
       projectSrc: "employeeportal.webp",
-      x: isMobile ? 100 : -100,
+      x: 100,
       liveLink:"https://employee-portal-iota.vercel.app/",
       githubLink:"https://github.com/elpah/employee-portal"
     },
@@ -122,21 +122,21 @@ export default function Projects() {
         "/images/skills_png/nodejs.svg",
       ],
       projectSrc: "movie-list.webp",
-      x: isMobile ? -100 : 100,
+      x:  100,
       liveLink:"https://github.com/elpah/the-movie-app",
       githubLink:"https://github.com/elpah/the-movie-app"
     },
    
-    {
-      projectName: "Arith-magics",
-      projectDetails:
-        "A web application for math enthusiasts, enabling users to conduct both simple and semi-complex mathematical operations, as well as indulge in random math quotes.",
-      toolsUsed: ["/images/skills_png/react.svg"],
-      projectSrc: "arithmatician.webp",
-      x: 100,
-      liveLink:"https://arith-magics.vercel.app/",
-      githubLink:"https://github.com/elpah/Arith-Magics"
-    },
+    // {
+    //   projectName: "Arith-magics",
+    //   projectDetails:
+    //     "A web application for math enthusiasts, enabling users to conduct both simple and semi-complex mathematical operations, as well as indulge in random math quotes.",
+    //   toolsUsed: ["/images/skills_png/react.svg"],
+    //   projectSrc: "arithmatician.webp",
+    //   x:  100,
+    //   liveLink:"https://arith-magics.vercel.app/",
+    //   githubLink:"https://github.com/elpah/Arith-Magics"
+    // },
   ];
   return (
     <main className={styles.main_container}>

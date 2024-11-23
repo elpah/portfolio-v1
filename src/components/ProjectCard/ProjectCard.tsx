@@ -11,8 +11,8 @@ type ProjectCardProps = {
   children: ReactNode;
   projectSrc: string;
   x: number;
-  liveLink:string;
-  githubLink:string;
+  liveLink: string;
+  githubLink: string;
 };
 
 export default function ProjectCard({
@@ -25,13 +25,14 @@ export default function ProjectCard({
   children,
 }: ProjectCardProps) {
   return (
-  <Link href={liveLink} target="_blank"> 
     <motion.div
+      onClick={() => {
+        window.open(`${liveLink}`, "_blank");
+      }}
       initial={{ opacity: 0, x: x }}
       animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 1 }}
       className={styles.card_container}
-      
     >
       <div className={styles.details}>
         <p className={styles.featured}>Featured Project</p>
@@ -54,8 +55,16 @@ export default function ProjectCard({
             })}
           </div>
           <div className={styles.redirect_icon_container}>
-           <Link  target="_blank" href={liveLink}><FaExternalLinkAlt className={styles.icon} /></Link>
-           <Link  target="_blank" href={githubLink}><img className={styles.github_icon} src="images/skills_png/github-3.svg" alt="" /></Link>
+            <Link target="_blank" href={liveLink}>
+              <FaExternalLinkAlt className={styles.icon} />
+            </Link>
+            <Link target="_blank" href={githubLink}>
+              <img
+                className={styles.github_icon}
+                src="images/skills_png/github-3.svg"
+                alt=""
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -67,6 +76,5 @@ export default function ProjectCard({
         />
       </div>
     </motion.div>
-    </Link>
   );
 }
