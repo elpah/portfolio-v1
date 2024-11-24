@@ -59,7 +59,7 @@ export default function ProjectCard({
                 alt={tool.tool_name}
                 className={`${styles.tools_image}`}
               />
-              <p className={styles.tool_name}>{tool.tool_name}</p>{" "}
+              <p className={styles.tool_name}>{tool.tool_name}</p>
             </div>
           ))}
         </div>
