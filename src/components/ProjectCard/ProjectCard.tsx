@@ -11,7 +11,7 @@ type ProjectCardProps = {
   projectSrc: string;
   x: number;
   liveLink: string;
-  githubLink: string;
+  githubLink?: string;
   toolsUsed: { tool_img: string; tool_name: string }[];
 };
 
@@ -64,22 +64,26 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={styles.redirect_container}>
-          <div
-            onClick={() => {
-              window.open(`${githubLink}`, "_blank");
-            }}
-            className={styles.link_container}
-          >
-            <div className={styles.link_image_container}>
-              <Image
-                height={15}
-                width={15}
-                src="images/socials_svg/github.svg"
-                alt="github icon"
-              />
+          {githubLink ? (
+            <div
+              onClick={() => {
+                window.open(`${githubLink}`, "_blank");
+              }}
+              className={styles.link_container}
+            >
+              <div className={styles.link_image_container}>
+                <Image
+                  height={15}
+                  width={15}
+                  src="images/socials_svg/github.svg"
+                  alt="github icon"
+                />
+              </div>
+              <p className={styles.link_text}>Github</p>
             </div>
-            <p className={styles.link_text}>Github</p>
-          </div>
+          ) : (
+            <p className={styles.private}> Private Repo</p>
+          )}
           <div
             onClick={() => {
               window.open(`${liveLink}`, "_blank");

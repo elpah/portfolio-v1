@@ -10,7 +10,7 @@ export default function Projects() {
     {
       projectName: "ZaurAutos",
       projectDetails:
-        "A MERN Stack (MongoDB, Express, React , Nodejs) web application for a car coompany",
+        "A fully-featured MERN stack (MongoDB, Express.js, React.js, Node.js) web application developed for a car company. Features include multi-language support and car filtering based on parameters such as price, make, model, and URL search parameters.",
       toolsUsed: [
         { tool_img: "/images/skills_png/react.svg", tool_name: "React" },
         { tool_img: "/images/skills_png/sass.svg", tool_name: "Sass" },
@@ -20,9 +20,37 @@ export default function Projects() {
       ],
       projectSrc: "zaurautos.webp",
       x: -100,
-      liveLink: "https://github.com/elpah/autosnl",
+      liveLink: "https://autosnl-main-app.vercel.app/en",
       githubLink: "https://github.com/elpah/autosnl",
     },
+    {
+      projectName: "ZaurAutos-Admin",
+      projectDetails:
+        "A full-stack application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for managing the ZaurAutos car platform. Key features include user authentication, and the ability to add, edit, view, and delete cars.",
+      toolsUsed: [
+        { tool_img: "/images/skills_png/react.svg", tool_name: "React" },
+        { tool_img: "/images/skills_png/express.svg", tool_name: "Express" },
+        { tool_img: "/images/skills_png/nodejs.svg", tool_name: "Node.js" },
+        { tool_img: "/images/skills_png/mongodb.svg", tool_name: "MongoDB" },
+      ],
+      projectSrc: "autosnl-dashboard.webp",
+      x: -100,
+      liveLink: "https://github.com/elpah/autosnl-admin",
+      githubLink: "https://github.com/elpah/autosnl-admin",
+    },
+    {
+      projectName: "Bridge Benter Center",
+      projectDetails:
+        "A website built using the MERN Stack (React.js, Node.js, strapi) for a Dutch-based NGO",
+      toolsUsed: [
+        { tool_img: "/images/skills_png/react.svg", tool_name: "React" },
+        { tool_img: "/images/skills_png/nodejs.svg", tool_name: "Node.js" },
+      ],
+      projectSrc: "bridgebrightcenter-cover.webp",
+      x: -100,
+      liveLink: "https://bridgebrightcenter.nl/",
+    },
+
     {
       projectName: "LoveLifeCoach",
       projectDetails:
@@ -54,7 +82,7 @@ export default function Projects() {
       ],
       projectSrc: "portfolio.webp",
       x: 100,
-      liveLink: "",
+      liveLink: "https://www.elpachrisobeng.com/projects",
       githubLink: "https://github.com/elpah/portfolio",
     },
     {
@@ -91,22 +119,6 @@ export default function Projects() {
       githubLink: "https://github.com/elpah/tiny-sitters",
     },
     {
-      projectName: "Flickr Image viewer",
-      projectDetails:
-        "A web application showcasing captivating images sourced from Flickr's public feed. Users can also search for specific images and discover related photos tailored to their input.",
-      toolsUsed: [
-        { tool_img: "/images/skills_png/next.svg", tool_name: "Next.js" },
-        {
-          tool_img: "/images/skills_png/tailwind.svg",
-          tool_name: "Tailwind CSS",
-        },
-      ],
-      projectSrc: "flickrfeed.webp",
-      x: -100,
-      liveLink: "https://flickr-feed-green.vercel.app/",
-      githubLink: "https://github.com/elpah/flickrfeed-Nextjs",
-    },
-    {
       projectName: "Employee Portal",
       projectDetails:
         "A frontend application for managing employer information. Functionalities include create, view, update, and delete employee profiles within the portal.",
@@ -117,21 +129,6 @@ export default function Projects() {
       x: 100,
       liveLink: "https://employee-portal-iota.vercel.app/",
       githubLink: "https://github.com/elpah/employee-portal",
-    },
-    {
-      projectName: "Movie App",
-      projectDetails:
-        "A two-day hackathon project dedicated to fetching data from a movie API, storing it in a database, and presenting it to users. Alongside browsing movies, users can add likes to their favorites.",
-      toolsUsed: [
-        { tool_img: "/images/skills_png/react.svg", tool_name: "React" },
-        { tool_img: "/images/skills_png/mongodb.svg", tool_name: "MongoDB" },
-        { tool_img: "/images/skills_png/express.svg", tool_name: "Express" },
-        { tool_img: "/images/skills_png/nodejs.svg", tool_name: "Node.js" },
-      ],
-      projectSrc: "movie-list.webp",
-      x: 100,
-      liveLink: "https://github.com/elpah/the-movie-app",
-      githubLink: "https://github.com/elpah/the-movie-app",
     },
   ];
   return (
@@ -155,11 +152,7 @@ export default function Projects() {
             githubLink={project.githubLink}
             liveLink={project.liveLink}
             toolsUsed={project.toolsUsed}
-          >
-            {/* {project.toolsUsed.map((tool, index) => (
-              <img key={index} src={tool_img} alt="tool" />
-            ))} */}
-          </ProjectCard>
+          ></ProjectCard>
         ))}
       </div>
     </main>

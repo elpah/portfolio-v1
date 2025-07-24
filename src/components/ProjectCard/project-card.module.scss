@@ -36,12 +36,14 @@
         align-items: center;
         padding: 15px;
         border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(40, 40, 40, 0.4);
         backdrop-filter: blur(8px);
 
         .about_project_text {
           line-height: 1.3em;
           font-size: 10px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
         }
       }
     }
@@ -99,6 +101,15 @@
       justify-content: flex-end;
       width: 30%;
       gap: 5px;
+      .private{
+        border: 1px solid #fff;
+        padding: 2px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        font-size: 11px;
+        margin-left: 10px;
+      }
 
       .link_container {
         height: 35px;
