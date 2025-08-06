@@ -20,7 +20,7 @@ export default function Projects() {
       ],
       projectSrc: "zaurautos.webp",
       x: -100,
-      liveLink: "https://autosnl-main-app.vercel.app/en",
+      liveLink: "https://www.zaurautos.com/",
       githubLink: "https://github.com/elpah/autosnl",
     },
     {
