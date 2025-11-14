@@ -63,7 +63,6 @@ export default function Projectspage() {
     },
     {
       category: "web",
-
       projectName: "Bridge Benter Center",
       projectDetails:
         "A website built using the MERN Stack (React.js, Node.js, strapi) for a Dutch-based NGO",
@@ -76,7 +75,6 @@ export default function Projectspage() {
     },
     {
       category: "c",
-
       projectName: "So Long",
       projectDetails:
         "A 2D game built in C programming language using MiniLibX. A player navigate a custom map, collect items, and reaches the goal (exit). This project focuses on core game dev concepts like map parsing, sprite rendering, and interactive controls.",
@@ -89,7 +87,6 @@ export default function Projectspage() {
     },
     {
       category: "c",
-
       projectName: "Minitalk",
       projectDetails:
         "Minitalk is an inter-process communication (IPC) project using Unix signals. It involves creating a client-server communication system where the client sends a string to the server via signals, and the server processes and prints the received message.",
@@ -99,10 +96,8 @@ export default function Projectspage() {
       projectSrc: "minitalk.webp",
       githubLink: "https://github.com/elpah/minitalk",
     },
-
     {
       category: "web",
-
       projectName: "LoveLifeCoach",
       projectDetails:
         "A user-friendly website designed and created for a counsellor to connect with clients, showcase their services, and provide valuable resources for personal growth and support.",
@@ -120,7 +115,6 @@ export default function Projectspage() {
     },
     {
       category: "web",
-
       projectName: "Portfolio",
       projectDetails:
         "My personal portfolio is a project that tells a bit about who i am and provides a comprehensive overview of my capabilities while highlighting some selected projects.",
@@ -138,7 +132,6 @@ export default function Projectspage() {
     },
     {
       category: "web",
-
       projectName: "Elpatronics",
       projectDetails:
         "An e-commerce website demonstrating the shopping process, including user registration, login authentication, payments via PayPal or Visa, order tracking, and email confirmations.",
@@ -155,11 +148,9 @@ export default function Projectspage() {
     },
     {
       category: "c",
-
       projectName: "Libft",
       projectDetails:
         " A custom C standard library recreated from scratch, implementing essential functions for memory handling, string manipulation, linked lists, and more as part of the 42 curriculum.",
-
       toolsUsed: [
         { tool_img: "/images/skills_png/c.svg", tool_name: "C Programming" },
       ],
