@@ -76,7 +76,7 @@ export default function Aboutpage() {
       >
         <h2 className={styles.header}>Introduction.</h2>
         <p className={styles.paragraph}>
-          🎓 Graduated with a Bachelor's degree in Computer Engineering from
+          🎓 Graduated with a Bachelor&apos;s degree in Computer Engineering from
           KhNURE - Kharkiv, Ukraine and Software Engineering from 42 Wolfsburg -
           Wolfsburg, Germany
           <br />
