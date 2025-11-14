@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 90%;
   max-width: 1400px;
-  height: 50vh;
+  min-height: 95vh;
   margin: auto;
   margin-top: 100px;
 
@@ -36,7 +36,7 @@
     .intro_name {
       color: #fff;
 
-      font-size: 35px;
+      font-size: 25px;
       margin: 15px auto 10px;
       text-align: center;
       border-right: 2px solid transparent;
@@ -57,7 +57,7 @@
 
     .intro_sentence {
       text-align: center;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 300;
       line-height: 1.5;
       color: #e7e7e7;
@@ -69,38 +69,35 @@
       display: flex;
       justify-content: center;
       margin-top: 10px;
-      /* max-width: 40%; */
       .social_container {
         border: 0.01px solid rgb(233, 207, 255);
         margin: 10px;
-        padding: 8px 10px 6px;
+        padding: 6px 8px 4px;
         border-radius: 2px;
         .social {
           z-index: 100;
-          font-size: 21px;
+          font-size: 18px;
           color: rgb(240, 236, 249);
         }
       }
     }
-    .cv_container {
-      margin-top: 30px;
-      justify-content: center;
-      display: flex;
+  }
+}
+@media (min-width: 400px) {
+  .main_container {
+    .intro_container {
+      font-size: 18px;
 
-      .cv_container_2 {
-        color: #7b4ae2;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-        border: 1px solid #7b4ae2;
-        border-radius: 8px;
-        padding: 8px;
-        animation: bounce 1s infinite;
-        .download_icon {
-          font-size: 1.5em;
-          font-weight: 100;
+      .intro_name {
+        font-size: 35px;
+      }
+
+      .intro_sentence {
+        font-size: 18px;
+      }
+      .socials_container {
+        .social_container {
+          padding: 8px 10px 6px;
         }
       }
     }
@@ -109,9 +106,8 @@
 
 @media (min-width: 767px) {
   .main_container {
-    margin-top: 3%;
+    min-height: 90vh;
     flex-direction: row;
-
     .image_container {
       margin-top: 0;
       margin-right: 50px;
@@ -152,28 +148,14 @@
           margin-left: 0;
         }
       }
-
-      .cv_container {
-        position: absolute;
-        left: 0;
-        .cv_container_2 {
-          cursor: pointer;
-          transition: font-size 0.3s ease;
-        }
-        .cv_container_2:hover {
-          font-size: 20px;
-        }
-      }
     }
   }
 }
 
 @media (min-width: 1024px) {
   .main_container {
-    margin-top: -0.5%;
     width: 80%;
     .image_container {
-      margin-top: 50px;
       .image {
         width: 250px;
         height: 250px;

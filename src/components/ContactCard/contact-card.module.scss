@@ -5,7 +5,7 @@
   margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 15px;
   border: 0.7px solid #4e3b59;
   padding: 10px;
   margin-bottom: 10px;
@@ -17,17 +17,15 @@
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(142, 103, 156);
-    height: 80px;
-    width: calc(100% / 4);
-    max-width: 80px;
+    height: 50px;
+    width: 50px;
     border-radius: 150%;
   }
   .info_container {
-    width: calc((3 * 100%) / 4);
     box-sizing: border-box;
     .info_header {
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 16px;
+      margin-bottom: 5px;
       &:hover {
         color: rgb(208, 154, 247);
       }

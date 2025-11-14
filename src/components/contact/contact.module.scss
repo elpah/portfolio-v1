@@ -3,7 +3,9 @@
   max-width: 1400px;
   margin: auto;
   color: rgb(198, 198, 198);
-  margin-top: 100px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+
   .badge {
     animation: glow 1s infinite alternate;
     width: 140px;
@@ -48,7 +50,7 @@
       }
     }
     .CardIcon {
-      font-size: 32px;
+      font-size: 25px;
       color: purple;
     }
 

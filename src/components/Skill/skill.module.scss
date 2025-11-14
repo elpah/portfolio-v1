@@ -1,16 +1,14 @@
 .skills_container {
-  width: 130px;
-  min-height: 50px;
+  min-height: 60px;
   background-color: #2d2341;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  margin: 10px;
+  gap: 5px;
   border: 1px solid #7b4ae2;
   transition: all 0.3s ease;
-  padding: 10px;
+  padding: 5px;
   .skill_name {
     font-size: 14px;
     color: #dcdcdc;
@@ -22,16 +20,13 @@
     transform: scale(1.05);
   }
   .skills_image {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
   }
 }
 
 @media (min-width: 767px) {
   .skills_container {
-    width: 140px;
-    min-width: 60px;
-    min-height: 60px;
     .skills_image {
       height: 45px;
       width: 45px;
@@ -41,8 +36,7 @@
 
 @media (min-width: 1024) {
   .skills_container {
-    min-width: 75px;
-    min-height: 75px;
+
     .skills_image {
       height: 65px;
       width: 65px;

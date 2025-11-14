@@ -1,12 +1,11 @@
 .main_container {
   width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   flex-grow: 1;
-  margin-top: 100px;
   .badge {
     animation: glow 1s infinite alternate;
     padding: 8px;
@@ -14,14 +13,13 @@
     color: #7b4ae2;
     background-color: #1d142b;
     width: 130px;
-    margin-top: 50px;
     margin-bottom: 20px;
   }
   .about_me {
     box-shadow: 0px 0px 10px 0px rgba(245, 244, 244, 0.7);
-
     border-radius: 8px;
     padding: 20px;
+    box-sizing: border-box;
     .header {
       font-size: 20px;
       margin-bottom: 10px;
@@ -31,11 +29,11 @@
       font-size: 14px;
       line-height: 1.5em;
       font-weight: 400;
-      color: #9c9c9c;
+      color: #cbcbcb;
     }
   }
   .skills {
-    margin-top: 20px;
+    margin-top: 60px;
     .header {
       padding-left: 20px;
     }
@@ -47,11 +45,13 @@
       width: 100%;
       border-radius: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 125px);
+      grid-template-columns: repeat(auto-fill, 110px);
       justify-content: center;
-      gap: 20px;
+      gap: 10px;
       margin-top: 20px;
-      padding: 15px;
+      padding: 20px 15px;
+    
+      box-sizing: border-box;
     }
     .skills_image {
       width: 90%;
@@ -63,9 +63,7 @@
 
 @media (min-width: 767px) {
   .main_container {
-    width: 80%;
     margin: auto;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -85,11 +83,9 @@
       .paragraph {
         font-size: 18px;
         line-height: 2em;
-        color: #9c9c9c;
       }
     }
     .skills {
-      margin-top: 20px;
       .badge_skills {
         width: 120px;
       }
@@ -101,7 +97,7 @@
         grid-template-columns: repeat(auto-fill, 140px);
         width: 100%;
         border-radius: 20px;
-        margin-top: 20px;
+        gap: 20px;
       }
       .skills_image {
         width: 90%;
@@ -112,9 +108,9 @@
   }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .main_container {
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -129,11 +125,9 @@
       .paragraph {
         font-size: 14px;
         line-height: 1.5em;
-        color: #9c9c9c;
       }
     }
     .skills {
-      margin-top: 20px;
       .header {
         padding-left: 20px;
       }
@@ -142,10 +136,6 @@
         width: 100%;
         border-radius: 20px;
         margin: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
         margin-top: 20px;
         padding: 40px;
       }

@@ -1,37 +1,30 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./project-card.module.scss";
-import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Link from "next/link";
 
 type ProjectCardProps = {
   projectName: string;
   projectDetails: string;
   projectSrc: string;
-  x: number;
-  liveLink: string;
+  liveLink?: string;
   githubLink?: string;
-  toolsUsed: { tool_img: string; tool_name: string }[];
+  toolsUsed: { tool_img?: string; tool_name: string }[];
 };
 
 export default function ProjectCard({
   projectName,
   projectDetails,
   projectSrc,
-  x,
   liveLink,
   toolsUsed,
   githubLink,
 }: ProjectCardProps) {
   return (
-    <motion.div
+    <div
       onClick={() => {
         window.open(`${liveLink}`, "_blank");
       }}
-      initial={{ opacity: 0, x: x }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 1 }}
       className={styles.wrapper}
     >
       <div className={styles.card_container}>
@@ -54,11 +47,11 @@ export default function ProjectCard({
         <div className={styles.tools_used}>
           {toolsUsed.map((tool, index) => (
             <div key={index} className={styles.tool_item}>
-              <img
+             {tool.tool_img && <img
                 src={tool.tool_img}
                 alt={tool.tool_name}
                 className={`${styles.tools_image}`}
-              />
+              />}
               <p className={styles.tool_name}>{tool.tool_name}</p>
             </div>
           ))}
@@ -84,19 +77,21 @@ export default function ProjectCard({
           ) : (
             <p className={styles.private}> Private Repo</p>
           )}
-          <div
-            onClick={() => {
-              window.open(`${liveLink}`, "_blank");
-            }}
-            className={styles.link_container}
-          >
-            <div className={styles.link_image_container}>
-              <FaExternalLinkAlt className={styles.redirect} />
+          {liveLink && (
+            <div
+              onClick={() => {
+                window.open(`${liveLink}`, "_blank");
+              }}
+              className={styles.link_container}
+            >
+              <div className={styles.link_image_container}>
+                <FaExternalLinkAlt className={styles.redirect} />
+              </div>
+              <p className={styles.link_text}>Live</p>
             </div>
-            <p className={styles.link_text}>Live</p>
-          </div>
+          )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
