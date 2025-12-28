@@ -12,7 +12,7 @@
     "@custom-react-hooks/all": "^1.4.19",
     "@emailjs/browser": "^4.3.3",
     "framer-motion": "^11.0.8",
-    "next": "^15.0.3",
+    "next": "15.0.7",
     "node-mailjet": "^3.4.1",
     "react": "^18",
     "react-dom": "^18",
@@ -22,7 +22,7 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.4"
   },
-   "engines": {
+  "engines": {
     "node": "22.x"
   },
   "devDependencies": {
